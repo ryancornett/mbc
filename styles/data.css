@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    --expand-200: #ccc;
+    --expand-400: #bbb;
+    --expand-600: #999;
+    --expand-800: #777;
+  }
+
+.confession {
+    width: 50vw;
+    margin: 2rem auto 2rem 2rem;
+}
+
+.chapter {
+    margin: 1rem 0;
+}
+
+.chapter-title {
+    font-family: var(--serif);
+    user-select: none;
+}
+
+.chapter-title-card {
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--expand-200);
+    border: 1px solid slategray;
+    padding: 0 3rem;
+    transition: all 250ms ease-in-out;
+    height: auto;
+  }
+  
+  .chapter-title-card:hover {
+    background-color: var(--expand-400);
+    transition: all 250ms ease-in-out;
+  }
+  
+  .chapter-title-card.active {
+    background-color: var(--expand-800);
+    color: white;
+    transition: all 150ms linear;
+  }
+  
+  .chapter-title-card.active:hover {
+    background-color: var(--expand-600);
+    transition: all 250ms ease-in-out;
+  }
+    
+  .chapter-plus-x {
+    color: var(--expand-800);
+    user-select: none;
+    font-size: 2rem;
+    transition: all 200ms ease-in-out;
+  }
+  
+  .chapter-plus-x:hover {
+    color: black;
+    transition: all 250ms ease-in-out;
+  }
+  
+  .chapter-plus-x.active {
+    color: white;
+    transform: rotate(45deg);
+    transition: all 200ms 250ms ease-in-out;
+  }
+  
+  .chapter-plus-x.active:hover {
+    color: var(--expand-200);
+    transition: all 250ms ease-in-out;
+  }
+  
+  .chapter-sections {
+    isolation: isolate;
+    position: relative;
+    z-index: -1;
+    width: 90%;
+    opacity: 0;
+    max-height: 1px;
+    line-height: 0;
+    padding: 0;
+    margin: -0.75rem auto;
+    transition: all 350ms ease-in-out;
+  }
+  
+  .chapter-sections.active {
+    max-height: unset;
+    margin: 0.5rem auto;
+    z-index: 0;
+    line-height: 1.15;
+    opacity: 1;
+    transition: all 350ms ease-in-out;
+  }
+
+  .chapter-sections.active > .chapter-section > p {
+    margin: 0.65rem 0 1.25rem 0;
+}
