@@ -1,3 +1,5 @@
+"use strict";
+
 import confession from "../data/confession.json" assert { type: "json" };
 import history from "../data/history.json" assert { type: "json" };
 import constitution from "../data/constitution.json" assert { type: "json" };

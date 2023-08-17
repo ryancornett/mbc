@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     font: inherit;
+    width: 100%;
   }
 
 :root {
@@ -51,7 +52,6 @@ h2 {
 
 h3 {
     font-size: var(--fs-700);
-    /* font-family: var(--serif); */
     color: var(--dark-brown);
 }
 
@@ -82,7 +82,7 @@ p {
 /* *** BEGIN SWITCHER CONTAINER */
 
 .switcher-container {
-  width: 100vw;
+  width: 100%;
   transition: all ease 300ms;
 }
 
@@ -125,3 +125,125 @@ p {
 }
 
 /* *** END SWITCHER CONTAINER */
+
+#countdown {
+  font-size: var(--fs-800);
+}
+
+/* *** BEGIN IMAGE SLIDER *** */
+
+.slider {
+  width: 100%;
+  margin: 2rem 0;
+  overflow-x: hidden;
+}
+
+.slides {
+  display: flex;
+  height: auto;
+  animation: loop-slides var(--scroll-speed) linear infinite;
+}
+
+.slide {
+  box-sizing: border-box;
+  width: var(--slide-width);
+  max-height: 40vh;
+  margin: 0 var(--slide-margins);
+}
+
+@keyframes loop-slides {
+
+  100% { 
+    transform: translateX(calc(var(--transform-distance) - var(--margin-correction)));
+  }
+}
+
+/* *** END IMAGE SLIDER *** */
+
+/* *** BEGIN SPINNER *** */
+
+.bar {
+  width: 5px;
+  height: 15px;
+  background-color: grey;
+  position: absolute;
+  opacity: 0.4;
+  border-radius: 2px;
+}
+.spinner {
+  position: relative;
+  width: 34px;
+  height: 42px;
+  margin: 20vh auto;
+}
+#two, #six {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#three, #seven {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+#four, #eight {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+#one {
+  top: 0;
+  left: 15px;
+}
+#two {
+  top: 4px;
+  left: 25px;
+}
+#three {
+  top: 13px;
+  left: 30px;
+}
+#four {
+  top: 23px;
+  left: 25px;
+}
+#five {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  top: 27px;
+  left: 15px;
+}
+#six {
+  top: 23px;
+  left: 5px;
+}
+#seven {
+  top: 13px;
+  left: 0;
+}
+#eight {
+  top: 4px;
+  left: 5px;
+}
+
+/* *** END SPINNER *** */
+
+/* *** FOOTER *** */
+
+footer {
+  max-width: 100%;
+  background-color: var(--dark-blue);
+  color: var(--off-white);
+}
+
+footer.dark {
+  background-color: var(--off-white);
+  color: black;
+}
+
+.footer-links, .footer-schedule, .social-media, .credit {
+  max-width: 100%;
+}
+
+.diamond {
+  --side: 10%;
+  height: var(--side);
+  width: var(--side);
+}

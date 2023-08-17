@@ -1,3 +1,5 @@
+"use strict";
+
 const switcher = document.querySelector('.switcher');
 switcher.innerHTML = `<img src="../images/moon.png" />`;
 const switcherContainer = document.querySelector('.switcher-container');
@@ -38,3 +40,8 @@ switch (pageId) {
 }
 
 // >>> EVERY PAGE GETS A PAGE ID TO FACILITATE THE ABOVE SWITCH/CASE TO DETERMINE THE ELEMENTS ARRAY FOR THEME SWITCHING <<<
+
+const credit = document.querySelector('.credit');
+const current = new Date();
+const year = current.getFullYear();
+credit.innerHTML = `Website by <a href="https://linktr.ee/ryancornett" alt="Ryan Cornett's LinkTree page">Ryan Cornett</a> | All rights reserved ${year} Manchester Baptist Church`;
