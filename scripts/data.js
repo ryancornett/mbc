@@ -5,7 +5,6 @@ import history from "../data/history.json" assert { type: "json" };
 import constitution from "../data/constitution.json" assert { type: "json" };
 import bylaws from "../data/bylaws.json" assert { type: "json" };
 
-
 // *** BEGIN CONFESSION ***
 const confessionContainer = document.querySelector('.confession');
 

@@ -4,14 +4,15 @@
     box-sizing: border-box;
     margin: 0;
     font: inherit;
-    width: 100%;
   }
 
 :root {
 --dark-blue: #252c56ff;
 --light-blue: #639fabff;
+--lighter-blue: rgb(159, 210, 221);
 --off-white: #f5f9e9ff;
---gray: #9aa895ff;
+--gray: rgb(116, 118, 139);
+--dark-gray: #232323;
 --dark-brown: #1d140cff;
 --sans-serif: 'Poppins', sans-serif;
 --serif: 'Merriweather', serif;
@@ -28,6 +29,10 @@
 --fs-900: 5.6rem;
 }
 
+:not(:defined) {
+  visibility: hidden;
+}
+
 i {
     font-style: italic;
 }
@@ -42,8 +47,9 @@ body {
 }
 
 h1 {
-    font-size: var(--fs-900);
+    font-size: var(--fs-700);
     color: var(--dark-blue);
+    text-transform: uppercase;
 }
 
 h2 {
@@ -72,30 +78,141 @@ span {
 }
 
 p {
-    font-size: var(--fs-200);
+    font-size: var(--fs-300);
 }
 
 .smallest {
     font-size: var(--fs-100);
 }
 
-/* *** BEGIN SWITCHER CONTAINER */
+nav {
+  margin: 0 auto;
+  box-shadow: 0px 2px 15px var(--gray);
+  padding: 1rem;
+  transition: all ease-in-out 350ms;
+  position: relative;
+  z-index: 2;
+}
 
-.switcher-container {
+nav.dark {
+  background-color: var(--dark-gray);
+  box-shadow: 0px 2px 15px var(--gray);
+  transition: all ease-in-out 350ms;
+}
+
+nav.dark > .banner > h1 {
+  color: var(--off-white);
+  transition: all ease-in-out 350ms;
+}
+
+.banner {
+  width: 50vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banner > img {
+  height: 8vh;
+  transition: all ease-in-out 350ms;
+}
+
+nav.dark > .banner > img {
+  content: url("../images/diamond_white.webp");
+  transition: all ease-in-out 350ms;
+}
+
+.navbar {
+  width: 99%;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all ease-in-out 350ms;
+}
+
+.nav-links {
+  padding-left: 4rem;
+}
+
+.navbar > .nav-links > ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar > .nav-links > ul > li {
+  width: auto;
+  margin-right: 2rem;
+}
+
+.sl-icon {
+  margin-right: 0.5rem;
+}
+
+nav.dark > .navbar > .nav-links > ul > li > a {
+  color: var(--off-white);
+  transition: all ease-in-out 350ms;
+}
+
+.navbar > .nav-links > ul > li > a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--dark-blue);
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all ease-in-out 350ms;
+}
+
+nav > .navbar > .nav-links > ul > li > a:hover {
+  transition: all ease-in-out 350ms;
+}
+
+nav > .navbar > .nav-links > ul > li > a::after {
+  content: '';
+  position: absolute;
+  background-color: var(--dark-blue);
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+nav > .navbar > .nav-links > ul > li > a:hover::after {
   width: 100%;
-  transition: all ease 300ms;
 }
 
-.switcher-container.dark {
-  background-color: #222;
-  transition: all ease 300ms;
+nav.dark > .navbar > .nav-links > ul > li > a:hover {
+  color: white;
+  transition: all ease-in-out 350ms;
 }
+
+nav.dark > .navbar > .nav-links > ul > li > a::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  bottom: -5px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+nav.dark > .navbar > .nav-links > ul > li > a:hover::after {
+  width: 100%;
+}
+
+
+/* *** BEGIN SWITCHER CONTAINER */
 
 .switcher {
   display: block;
-  height: 50px;
-  width: 50px;
-  margin: 1rem 3rem 1rem auto;
+  height: 30px;
+  width: 30px;
+  margin: 0 4rem;
   cursor: pointer;
   transform-origin: center;
   transform: rotate(0deg);
@@ -103,7 +220,7 @@ p {
 }
 
 .switcher > img:hover {
-  filter: drop-shadow(0px 0px 3px var(--dark-blue));
+  filter: drop-shadow(0px 0px 1px var(--dark-blue));
   transition: all ease 300ms;
 }
 
@@ -114,28 +231,32 @@ p {
 }
 
 .switcher.dark > img:hover {
-  filter: drop-shadow(0px 0px 3px var(--light-blue));
+  filter: drop-shadow(0px 0px 1px var(--light-blue));
   transition: all ease 300ms;
 }
 
 .switcher > img {
-  height: 50px;
-  width: 50px;
+  height: 30px;
+  width: 30px;
   transition: all ease 300ms;
 }
 
 /* *** END SWITCHER CONTAINER */
 
-#countdown {
-  font-size: var(--fs-800);
-}
-
 /* *** BEGIN IMAGE SLIDER *** */
 
 .slider {
   width: 100%;
-  margin: 2rem 0;
+  position: relative;
+  z-index: 1;
+  padding: 2rem 0;
   overflow-x: hidden;
+  background-color: white;
+  transition: all ease 300ms;
+}
+
+.slider.dark {
+  background-color: var(--dark-gray);
 }
 
 .slides {
@@ -160,6 +281,17 @@ p {
 
 /* *** END IMAGE SLIDER *** */
 
+main {
+  background-color: white;
+  color: black;
+  transition: all ease 300ms;
+}
+
+main.dark {
+  background-color: var(--dark-gray);
+  color: var(--off-white);
+}
+
 /* *** BEGIN SPINNER *** */
 
 .bar {
@@ -174,7 +306,7 @@ p {
   position: relative;
   width: 34px;
   height: 42px;
-  margin: 20vh auto;
+  margin: 12vh auto;
 }
 #two, #six {
   -webkit-transform: rotate(45deg);
@@ -225,6 +357,70 @@ p {
 
 /* *** END SPINNER *** */
 
+#social-media-icons-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+#social-media-icons-links > a > img {
+  --size: 4vh;
+  height: var(--size);
+  margin: 1rem 0.5rem;
+  transition: all ease 300ms;
+  opacity: 0.9;
+}
+
+#social-media-icons-links > a:hover > img {
+  opacity: 1;
+  filter: drop-shadow(0 0 2px var(--dark-blue));
+}
+
+#social-media-icons-links.dark > a > img {
+  filter: invert(100%);
+}
+
+#social-media-icons-links > a:nth-of-type(1) > img, #social-media-icons-links > a:nth-of-type(4) > img {
+  height: calc(1.35 * var(--size));
+}
+
+#countdown-service-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+/* *** BEGIN COUNTDOWN CONTAINER */
+
+.countdown-container {
+  margin: 0 0 1rem 3rem;
+}
+
+#countdown {
+  font-size: var(--fs-900);
+  margin-top: -1rem;
+}
+
+#prayer-request-container {
+  width: 100%;
+  padding: 3rem;
+}
+
+#prayer-requests {
+  max-width: 40vw;
+}
+
+.prayer-list {
+  columns: 2;
+}
+
+.prayer-item {
+  font-size: var(--fs-300);
+}
+
 /* *** FOOTER *** */
 
 footer {
@@ -240,6 +436,32 @@ footer.dark {
 
 .footer-links, .footer-schedule, .social-media, .credit {
   max-width: 100%;
+}
+
+.footer-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  transition: all ease 350ms;
+}
+
+.footer-link:hover {
+  color: var(--lighter-blue);
+}
+
+#current-weather {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.weather-text {
+  padding: 0.5rem 1.5rem;
+}
+
+.weather-icon {
+  filter: contrast(280%) brightness(1%) invert(85%);
+  height: 5vw;
 }
 
 .diamond {

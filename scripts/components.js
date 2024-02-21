@@ -1,21 +1,22 @@
 "use strict";
+import getCurrentWeather from "./weather.js";
 
 const allImages = [
+    '../images/slider/001-resized.jpg', 
     'https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80',
-    'https://images.unsplash.com/photo-1472145246862-b24cf25c4a36',
-    'https://images.unsplash.com/photo-1571838279542-c2b7c7e11b46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-    'https://images.unsplash.com/photo-1480321182142-e77f14b9aa64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-    'https://images.unsplash.com/photo-1529098872095-cc14f7439917?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
-    'https://images.unsplash.com/photo-1493243350443-9e3048ce7288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80',
+    '../images/slider/002-resized.jpg',
     'https://images.unsplash.com/photo-1439723680580-bfd9d28ef9b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80',
-    'https://plus.unsplash.com/premium_photo-1663013203358-c20895b28da1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80'
+    '../images/slider/003-resized.jpg',
+    'https://images.unsplash.com/photo-1529098872095-cc14f7439917?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    '../images/slider/004-resized.jpg',
+    'https://images.unsplash.com/photo-1493243350443-9e3048ce7288?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1340&q=80'
 ];
 
 const slides = document.querySelector('.slides');
 let imagesAcrossScreen = 4;
-let totalImages = 8;
-let slideMargins = 0.08;
-let scrollSpeed = 30;
+let totalImages = allImages.length;
+let slideMargins = 0.2;
+let scrollSpeed = 50; // seconds per loop
 let arraySlice = [];
 let sliderImages = [];
 
@@ -67,6 +68,8 @@ rotation = setInterval(function() {
 
 // END LOADING SPINNER
 
+// *** BEGIN COUNTDOWN TIMER ***
+
 function getTargetTime() {
     const now = new Date();
     const dayOfWeek = now.getDay();
@@ -94,7 +97,6 @@ function getTargetTime() {
 
     return targetTime;
   }
-
   
   function updateCountdown() {
     const countdownElement = document.getElementById('countdown');
@@ -110,12 +112,17 @@ function getTargetTime() {
     const minutesFormatted = (minutes < 10 ? '0' : '') + minutes;
     const secondsFormatted = (seconds < 10 ? '0' : '') + seconds;
   
-    countdownElement.textContent = `${hoursFormatted} ${minutesFormatted} ${secondsFormatted}`;
+    countdownElement.textContent = `${hoursFormatted}:${minutesFormatted}:${secondsFormatted}`;
   
     if (timeDifference < 0) {
       clearInterval(interval);
-      countdownElement.textContent = '00 00 00';
+      countdownElement.textContent = '00:00:00';
     }
   }
   
-  const interval = setInterval(updateCountdown, 1000);
+const interval = setInterval(updateCountdown, 1000);
+
+  // *** END COUNTDOWN TIMER ***
+
+await getCurrentWeather();
+
