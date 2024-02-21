@@ -4,7 +4,7 @@ const nav = document.querySelector('nav');
 nav.innerHTML = 
     `<div class="banner">
         <h1>Manchester Baptist Church</h1>
-        <img src="../images/diamond_black.webp" alt="Manchester Baptist Church logo"/>
+        <img src="images/diamond_black.webp" alt="Manchester Baptist Church logo"/>
     </div>
 
     <div class="navbar">
@@ -28,7 +28,7 @@ nav.innerHTML =
     </div>`;
 
 const switcher = document.querySelector('.switcher');
-switcher.innerHTML = `<img src="../images/moon.webp" />`;
+switcher.innerHTML = `<img src="images/moon.webp" />`;
 const main = document.querySelector('main');
 const SLIDER_DIV = document.querySelector('.slider');
 const SOCIAL_MEDIA_ICONS = document.getElementById('social-media-icons-links');
@@ -40,11 +40,11 @@ function switchTheme() {
     themeElements[i].classList.toggle('dark');
     }
     if (lightTheme) {
-        switcher.innerHTML = `<img src="../images/sun.webp" />`;
+        switcher.innerHTML = `<img src="images/sun.webp" />`;
         lightTheme = false;
     
     } else {
-        switcher.innerHTML = `<img src="../images/moon.webp" />`;
+        switcher.innerHTML = `<img src="images/moon.webp" />`;
         lightTheme = true;
     }
 }
