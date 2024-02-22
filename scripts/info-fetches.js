@@ -65,10 +65,13 @@ async function populateServiceInfo() {
     }
 
     htmlString += 
-    `<p><i>${SERVICE_ELEMENTS[13]}</i>: <span style="font-weight:bold;">${serviceInfo.details.benediction}</span></p>`;
+    `<p><i>${SERVICE_ELEMENTS[13]}</i>: <span style="font-weight:bold;">${serviceInfo.details.benediction}</span></p><h6> </h6>`;
 
-    if (serviceInfo.details.note.isEmpty == "no") {
-        htmlString += `<h6 style="margin-top:0.5rem;">${serviceInfo.details.note.text}</h6>`
+    if (serviceInfo.details.announcements.isEmpty == "no") {
+        let announcements = serviceInfo.details.announcements.list;
+        announcements.forEach(announcement => {
+        htmlString += `<sl-badge variant="primary" pill>${announcement}</sl-badge>`
+        })
     }
     serviceInfoDiv.innerHTML = htmlString;
 }

@@ -13,7 +13,7 @@ const allImages = [
 ];
 
 const slides = document.querySelector('.slides');
-let imagesAcrossScreen = 4;
+let imagesAcrossScreen = 5;
 let totalImages = allImages.length;
 let slideMargins = 0.2;
 let scrollSpeed = 50; // seconds per loop
@@ -41,30 +41,32 @@ function generateSlider() {
   }
 };
 
-setTimeout(function() {
-    generateSlider();
-  }, 2000);
+generateSlider();
 
-// LOADING SPINNER from https://codepen.io/PsychoLlama/pen/JdpQJe?editors=1010
+// setTimeout(function() {
+//     generateSlider();
+//   }, 2000);
 
-  window.onload = function() {
-var bars, current, rotation, last;
+// // LOADING SPINNER from https://codepen.io/PsychoLlama/pen/JdpQJe?editors=1010
 
-bars = document.querySelectorAll('.bar');
-current = 0;
-last = 0;
+//   window.onload = function() {
+// var bars, current, rotation, last;
 
-rotation = setInterval(function() {
-    bars[last].style.opacity = 0.4;
-    bars[current].style.opacity = 1;
-    last = current;
-    if (current === bars.length - 1) {
-    current = 0;
-    } else {
-    current++;
-    }
-}, 150)
-}
+// bars = document.querySelectorAll('.bar');
+// current = 0;
+// last = 0;
+
+// rotation = setInterval(function() {
+//     bars[last].style.opacity = 0.4;
+//     bars[current].style.opacity = 1;
+//     last = current;
+//     if (current === bars.length - 1) {
+//     current = 0;
+//     } else {
+//     current++;
+//     }
+// }, 150)
+// }
 
 // END LOADING SPINNER
 

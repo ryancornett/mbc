@@ -6,6 +6,40 @@ populatePrayerRequests();
 
 populateServiceInfo();
 
+const topButton = document.getElementById('to-top');
+function displayTopButton() {
+    if (window.scrollY >= 650) {
+        topButton.classList.add('visible');
+    } else {
+        topButton.classList.remove('visible');
+    }
+}
+document.addEventListener('scroll', displayTopButton);
+
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+  
+  let floatUp = function(entries, observer) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            if(!entry.target.classList.contains('float-up')) {
+                entry.target.classList.add('float-up');            
+            }
+            observer.unobserve(entry.target);
+        }
+    });
+  };
+  
+  let observer = new IntersectionObserver(floatUp, options);
+  
+  let targets = document.querySelectorAll('.observable');
+  targets.forEach(target => {
+  observer.observe(target);
+  });
+
 // >>> EVERY PAGE GETS A PAGE ID TO FACILITATE THE BELOW SWITCH/CASE TO DETERMINE THE ELEMENTS ARRAY FOR THEME SWITCHING <<<
 
 // CHANGE pageElements to a parameter with each page's corresponding elements array

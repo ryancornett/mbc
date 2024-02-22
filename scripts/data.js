@@ -46,7 +46,6 @@ function populateChapters(index) {
 for (let i = 0; i < confession.data.length; i++) {
     populateChapters(i);
 };
-// *** END CONFESSION ***
 
 // *** BEGIN EXPANDABLES ***
 
@@ -83,3 +82,5 @@ chapterTitles.forEach((chapterTitle, index) => {
 });
 
 // *** END EXPANDABLES ***
+
+// ***** END CONFESSION *****
