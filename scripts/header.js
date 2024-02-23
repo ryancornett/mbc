@@ -1,50 +1,72 @@
 "use strict";
 
 const nav = document.querySelector('nav');
-nav.innerHTML = 
-    `<div class="banner" id="top">
-        <h1>Manchester Baptist Church</h1>
-        <img src="images/diamond_white.webp" alt="Manchester Baptist Church logo"/>
-    </div>
+const banner = document.createElement('div');
+banner.classList.add('banner');
+banner.setAttribute('id', 'top');
 
-    <div class="navbar">
-        <div class="nav-links">
-            <ul>
-                <li><a href="#"><sl-icon name="house-door" class="sl-icon"></sl-icon>
-                Home</a></li>
-                <li><a href="#beliefs"><sl-icon name="people" class="sl-icon"></sl-icon>
-                Who We Are</a></li>
-                <li><a href="#this-week"><sl-icon name="calendar-week" class="sl-icon"></sl-icon>
-                This Week at MBC</a></li>
-                <li><a href="#contact-us"><sl-icon name="info-circle" class="sl-icon"></sl-icon>
-                Contact Us</a></li>
-                <li><a href="https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=AQBVR8XXE4L3N&source=url&ssrt=1708372905245"><sl-icon name="wallet" class="sl-icon"></sl-icon>Online Giving</a></li>
-            </ul>
-        </div>
+const bannerTitle = document.createElement('h1');
+bannerTitle.classList.add('cursive');
+bannerTitle.textContent = "Manchester Baptist Church";
+banner.appendChild(bannerTitle);
 
-        <div class="switcher">
-        </div>
+const bannerImg = document.createElement('img');
+bannerImg.setAttribute('src', "images/diamond_white.webp");
+bannerImg.setAttribute('alt', "Manchester Baptist Church logo");
+banner.appendChild(bannerImg);
+nav.appendChild(banner);
 
-    </div>`;
+const navbar = document.createElement('div');
+navbar.classList.add('navbar');
+nav.appendChild(navbar);
+const navLinks = document.createElement('div');
+navLinks.classList.add('nav-links');
+navbar.appendChild(navLinks);
+const navUl = document.createElement('ul');
+navLinks.appendChild(navUl);
+const navigation = [["#", "house-door", "Home"], ["#beliefs", "people", "Who We Are"], ["#this-week", "calendar-week", "This Week at MBC"], ["#contact-us", "info-circle", "Contact Us"], ["https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=AQBVR8XXE4L3N&source=url&ssrt=1708372905245", "wallet", "Online Giving"]];
 
-const switcher = document.querySelector('.switcher');
-switcher.innerHTML = `<img src="images/moon.webp" />`;
+for (let i = 0; i < navigation.length; i++) {
+    let item = document.createElement('li');
+    let link = document.createElement('a');
+    link.setAttribute('href', navigation[i][0]);
+    let icon = document.createElement('sl-icon');
+    icon.setAttribute('name', navigation[i][1]);
+    icon.classList.add('sl-icon');
+    link.appendChild(icon);
+    let linkText = document.createTextNode(navigation[i][2]);
+    link.appendChild(linkText);
+    item.appendChild(link);
+    navUl.appendChild(item);
+};
+const switcher = document.createElement('div')
+switcher.classList.add('switcher');
+navbar.appendChild(switcher);
+
+let switcherIcon = document.createElement('img');
+switcherIcon.setAttribute('src', "images/moon.webp");
+switcher.appendChild(switcherIcon);
 const main = document.querySelector('main');
 const SLIDER_DIV = document.querySelector('.slider');
 const SOCIAL_MEDIA_ICONS = document.getElementById('social-media-icons-links');
-const themeElements = [switcher, nav, main, SLIDER_DIV, SOCIAL_MEDIA_ICONS];
+const BACKGROUND_2 = document.querySelectorAll('.background-2');
+const FOOTER = document.querySelector('footer');
+const themeElements = [switcher, nav, main, SLIDER_DIV, SOCIAL_MEDIA_ICONS, FOOTER];
 let lightTheme = true;
 
 function switchTheme() {
     for (let i=0; i<themeElements.length; i++) {
     themeElements[i].classList.toggle('dark');
     }
+    BACKGROUND_2.forEach(bg => {
+        bg.classList.toggle('dark');
+    })
     if (lightTheme) {
-        switcher.innerHTML = `<img src="images/sun.webp" />`;
+        switcherIcon.setAttribute('src', "images/sun.webp")
         lightTheme = false;
     
     } else {
-        switcher.innerHTML = `<img src="images/moon.webp" />`;
+        switcherIcon.setAttribute('src', "images/moon.webp");
         lightTheme = true;
     }
 }

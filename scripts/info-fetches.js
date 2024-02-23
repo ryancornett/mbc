@@ -42,7 +42,7 @@ async function populateServiceInfo() {
     }
     
     let htmlString = 
-        `<h5>${serviceInfo.date} Morning Worship Service:</h5>
+        `<h5 class="serif">${serviceInfo.date} Morning Worship Service:</h5>
         <p><i>${SERVICE_ELEMENTS[1]}</i>: <span style="font-weight:bold;">${serviceInfo.details.openingScripture}</span></p>
         <p><i>${SERVICE_ELEMENTS[2]}</i>: <span style="font-weight:bold;">${serviceInfo.details.callToWorship}</span></p>
         <p><i>${SERVICE_ELEMENTS[3]}</i>: <span style="font-weight:bold;">${serviceInfo.details.fellowshipSong}</span></p>
@@ -70,7 +70,7 @@ async function populateServiceInfo() {
     if (serviceInfo.details.announcements.isEmpty == "no") {
         let announcements = serviceInfo.details.announcements.list;
         announcements.forEach(announcement => {
-        htmlString += `<sl-badge variant="primary" pill>${announcement}</sl-badge>`
+        htmlString += `<sl-badge variant="warning" pill>${announcement}</sl-badge>`
         })
     }
     serviceInfoDiv.innerHTML = htmlString;

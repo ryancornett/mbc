@@ -43,33 +43,6 @@ function generateSlider() {
 
 generateSlider();
 
-// setTimeout(function() {
-//     generateSlider();
-//   }, 2000);
-
-// // LOADING SPINNER from https://codepen.io/PsychoLlama/pen/JdpQJe?editors=1010
-
-//   window.onload = function() {
-// var bars, current, rotation, last;
-
-// bars = document.querySelectorAll('.bar');
-// current = 0;
-// last = 0;
-
-// rotation = setInterval(function() {
-//     bars[last].style.opacity = 0.4;
-//     bars[current].style.opacity = 1;
-//     last = current;
-//     if (current === bars.length - 1) {
-//     current = 0;
-//     } else {
-//     current++;
-//     }
-// }, 150)
-// }
-
-// END LOADING SPINNER
-
 // *** BEGIN COUNTDOWN TIMER ***
 
 function getTargetTime() {
@@ -127,4 +100,3 @@ const interval = setInterval(updateCountdown, 1000);
   // *** END COUNTDOWN TIMER ***
 
 await getCurrentWeather();
-
