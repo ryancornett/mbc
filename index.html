@@ -7,8 +7,6 @@
         <link rel="icon" type="image/x-icon" href="/images/diamond_black.ico">
 
         <!-- TODO: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-            'Who We Are' quadrant images: Leadership (elders, deacons), Missions (hospitality, evangelism, etc.), Confession, & Documents (history, constitution, bylaws)
-            'New Here' Google contact form for bulletin QR and 'Contact Us' Google form for site
             Theme preference in local storage
             Make mobile-friendly
          -->
@@ -21,7 +19,7 @@
 
     </head>
     <body>
-        <nav>
+        <nav id="top">
             <!-- populated with js in header.js -->
         </nav>
 
@@ -56,9 +54,83 @@
                 </article>
             </div>
             
-            <div class="viewport-100 background-2" id="beliefs">
-                <h2 class="observable serif">Who We Are</h2>
-                <h3 class="observable">coming soon...</h3>
+            <div class="viewport-100 background-2" id="about">
+                <div class="about-container">
+                    
+                    <div class="observable about-section">
+                        <div>
+                            <div class="ministry-list">
+                                <p>Hospitality (funerals, community meals, etc.)</p>
+                                <p>Charity Fund (offerings accepted 1st Sundays)</p>
+                                <p>Visitation & Evangelism - 1st & 3rd Tuesdays</p>
+                                <p>Men's Meeting (2nd & 4th Saturdays)</p>
+                            </div>
+                        </div>
+                        <p>MINISTRIES</p>
+                    </div>
+                    
+                    <div class="observable about-section">
+                        <div class="leadership">
+                            <div class="elders">
+                                <p>Lead Pastor Ken Bolin</p>
+                                <p>Elder John Rice</p>
+                                <p>Assistant Pastor Ryan Cornett</p>
+                            </div>
+
+                            <div class="deacons">
+                                <h6>Deacons</h6>
+                                <div class="deacon-columns">
+                                    <div class="col-1">
+                                        <p>Charles Goins, Chairman</p>
+                                        <p>Michael Baker</p>
+                                        <p>Larry Day</p>
+                                        <p>Jimmy Dezarn</p>
+                                        <p>Butch Grubb</p>
+                                    </div>
+                                    <div class="col-2">
+                                        <p>Donnie Hacker</p>
+                                        <p>Charles Keith</p>
+                                        <p>Bran Lewis</p>
+                                        <p>Fred Rogers</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p>LEADERSHIP</p>
+                    </div>
+                    
+                    <div class="observable about-section">
+                        <div>
+                            <div class="schedule">
+                                <h6>Sundays</h6>
+                                <p>9:30 AM Fellowship Breakfast</p>
+                                <p>10:00 AM Sunday School</p>
+                                <p>11:00 AM Morning Worship Service</p>
+                                <p>6:00 PM Evening Worship Service</p>
+                            </div>
+                            <div class="schedule">
+                                <h6>Wednesdays</h6>
+                                <p>6:00 PM Prayer & Bible Study</p>
+                                <p>6:00 PM Youth Groups</p>
+                            </div>
+                        </div>
+                        
+                        <p>SCHEDULE</p>
+                    </div>
+                    
+                    <div class="observable about-section">
+                        <div>
+                            <div class="resource-links">
+                                <i>links coming soon</i>
+                                <p>Philadelphia Confession of Faith, 1742</p>
+                                <a href="https://bfm.sbc.net/bfm2000/" target="_blank">Baptist Faith & Message</a>
+                                <p>Church Constitution & Bylaws</p>
+                                <p>Elders' Recommended Resources</p>
+                            </div>
+                        </div>
+                        <p>RESOURCES</p>
+                    </div>
+                </div>
             </div>
 
             <div class="viewport-100" id="this-week">
@@ -82,8 +154,7 @@
             </div>
             
             <div class="viewport-100 background-2" id="contact-us">
-                <h2 class="observable serif">Contact Us</h2>
-                <h3 class="observable">coming soon...</h3>
+                <iframe class="observable" title="Google form to contact MBC"src="https://docs.google.com/forms/d/e/1FAIpQLSdqiZ6xCARe3OqxKd_y2tGl9K1YYOtQ69lgld4i_DlVm7VYlw/viewform?embedded=true" width="50%" height="75%" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
 
         </main>
@@ -102,7 +173,7 @@
 
                 <img src="images/diamond_white.webp" alt="MBC Diamond logo" class="diamond" />
 
-                <div class="footer-schedule col-2">
+                <div class="footer-schedule">
                     <ul>
                         <li>Wednesdays</li>
                         <li>6:00 PM Prayer & Bible Study</li>

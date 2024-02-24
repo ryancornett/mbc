@@ -60,7 +60,9 @@ body {
 }
 
 h1 {
-    font-size:var(--fs-800);
+  font-size:var(--fs-800);
+  user-select: none;
+  cursor: default;
 }
 
 h2 {
@@ -116,6 +118,7 @@ nav {
   transition: all ease-in-out 350ms;
   position: relative;
   z-index: 2;
+  scroll-margin-top: 2rem;
 }
 
 nav.dark {
@@ -126,7 +129,6 @@ nav.dark {
 
 .banner {
   width: 50vw;
-  cursor: default;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -421,6 +423,90 @@ main.dark {
   hsl(212deg 50% 35%) 79%,
   hsl(212deg 50% 37%) 100%
   );
+  color: white;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  height: 35vh;
+  width: 35%;
+  background-size: cover;
+}
+
+.about-section:nth-of-type(1) {
+  background-image: url('../images/quilts.png');
+}
+
+.about-section:nth-of-type(2) {
+  background-image: url('../images/table.png');
+}
+
+.about-section:nth-of-type(3) {
+  background-image: url('../images/calendar.jpg');
+}
+
+.about-section:nth-of-type(4) {
+  background-image: url('../images/desk.png');
+}
+
+.about-section > div {
+  display: none;
+  color: white;
+  margin-top: 0;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: rgb(0 0 0 / 0.5);
+  backdrop-filter: blur(4px);
+  font-size: clamp(0.85rem, 1.1vw, 1.3em);
+  transition: all ease-in-out 300ms;
+}
+
+.about-section:hover > div {
+  display: flex;
+  justify-content: space-between;
+  opacity: 1;
+  transition: all ease-in-out 300ms;
+}
+
+.about-section > p {
+  opacity: 1;
+  color: white;
+  font-size: var(--fs-700);
+  filter: drop-shadow(0 1px 2px black);
+  cursor: default;
+  user-select: none;
+  transition: all ease-in-out 300ms;
+}
+
+.about-section:hover > p {
+  display: none;
+  opacity: 0;
+}
+
+.leadership:hover {
+  display: flex;
+  flex-direction: column;
+}
+
+.deacon-columns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.resource-links > a {
   color: white;
 }
 

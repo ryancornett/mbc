@@ -24,7 +24,7 @@ navLinks.classList.add('nav-links');
 navbar.appendChild(navLinks);
 const navUl = document.createElement('ul');
 navLinks.appendChild(navUl);
-const navigation = [["#", "house-door", "Home"], ["#beliefs", "people", "Who We Are"], ["#this-week", "calendar-week", "This Week at MBC"], ["#contact-us", "info-circle", "Contact Us"], ["https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=AQBVR8XXE4L3N&source=url&ssrt=1708372905245", "wallet", "Online Giving"]];
+const navigation = [["#", "house-door", "Home"], ["#about", "people", "About MBC"], ["#this-week", "calendar-week", "This Week at MBC"], ["#contact-us", "info-circle", "Contact Us"], ["https://www.paypal.com/donate/?cmd=_s-xclick&hosted_button_id=AQBVR8XXE4L3N&source=url&ssrt=1708372905245", "wallet", "Online Giving"]];
 
 for (let i = 0; i < navigation.length; i++) {
     let item = document.createElement('li');

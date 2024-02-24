@@ -8,7 +8,7 @@ populateServiceInfo();
 
 const topButton = document.getElementById('to-top');
 function displayTopButton() {
-    if (window.scrollY >= 650) {
+    if (window.scrollY >= 550) {
         topButton.classList.add('visible');
     } else {
         topButton.classList.remove('visible');
@@ -58,7 +58,7 @@ switch (pageId) {
 const credit = document.querySelector('.credit');
 const current = new Date();
 const year = current.getFullYear();
-credit.innerHTML = `Website by <a href="https://linktr.ee/ryancornett" alt="Ryan Cornett's LinkTree page" class="footer-link">Ryan Cornett</a> | All rights reserved ${year} Manchester Baptist Church`;
+credit.innerHTML = `Website by <a href="https://linktr.ee/ryancornett" alt="Ryan Cornett's LinkTree page" class="footer-link">Ryan Cornett</a> | All rights reserved 2021-${year} Manchester Baptist Church`;
 
 // localStorage.setItem('foo', 'bar');
 // let check = localStorage.getItem('foo');
