@@ -657,6 +657,10 @@ iframe {
   padding-bottom: 0.5rem;
 }
 
+.credit > span {
+  font-size: var(--fs-100);
+}
+
 .footer-link {
   text-decoration: none;
   font-weight: bold;

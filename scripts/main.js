@@ -58,7 +58,16 @@ switch (pageId) {
 const credit = document.querySelector('.credit');
 const current = new Date();
 const year = current.getFullYear();
-credit.innerHTML = `Website by <a href="https://linktr.ee/ryancornett" alt="Ryan Cornett's LinkTree page" class="footer-link">Ryan Cornett</a> | All rights reserved 2021-${year} Manchester Baptist Church`;
+const preCredit = document.createElement('span');
+preCredit.textContent = "Website by ";
+credit.appendChild(preCredit);
+const creditLink = document.createElement('a');
+creditLink.setAttribute('href', "https://linktr.ee/ryancornett");
+creditLink.setAttribute('alt', "Ryan Cornett's LinkTree page");
+creditLink.classList.add("footer-link")
+creditLink.textContent = "Ryan Cornett";
+credit.appendChild(creditLink);
+credit.insertAdjacentText('beforeend', ` | All rights reserved 2021-${year} Manchester Baptist Church`);
 
 // localStorage.setItem('foo', 'bar');
 // let check = localStorage.getItem('foo');
