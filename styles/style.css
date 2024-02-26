@@ -477,6 +477,7 @@ main.dark {
 .about-section:hover > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   opacity: 1;
   transition: all ease-in-out 300ms;
 }
@@ -552,6 +553,24 @@ main.dark {
 
 .prayer-item {
   font-size: var(--fs-300);
+}
+
+.flex-space-around {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.viewport-100 > h6 {
+  max-width: 30%;
+  margin-right: -2rem;
+  font-size: 1.25rem;
+  padding: 2rem 6rem;
+  border: solid 3px var(--sl-color-primary-600);
+  border-radius: 5%;
+  color: white;
+  background-color: var(--dark-gray);
+  filter: drop-shadow(0 8px 2px var(--sl-color-primary-600));
 }
 
 /* *** FOOTER *** */
