@@ -1,0 +1,68 @@
+{
+    "meta": {
+        "created": "2/27/2024",
+        "updated": "n/a"
+    },
+
+    "data": {
+        "news": [
+            ["World News Group", "https://wng.org/"],
+            ["Kentucky Today", "kentuckytoday.com"],
+            ["World Watch","https://worldwatch.news/"]
+        ],
+
+        "supplemental": [
+            ["Ligonier", "https://www.ligonier.org/"],
+            ["RefNet", "https://refnet.fm/"],
+            ["Sermon Audio", "https://www.sermonaudio.com/"],
+            ["Desiring God", "desiringgod.org"]
+        ],
+
+        "classicAuthors": [
+            "Benjamin Keach", "John Bunyan", "Charles Spurgeon", "Herman Bavinck", "Anne Bradstreet", "John Flavel", "Thomas Watson", "Jonathan Edwards"
+        ],
+
+        "modernAuthors": [
+            "John McArthur", "R.C. Sproul", "Paul Washer", "John Piper", "W.A. Criswell", "Kevin DeYoung"
+        ],
+
+        "publishers": [
+            ["Baptist Heritage", "https://baptistheritagepress.org/"],
+            ["Reformation Heritage", "https://heritagebooks.org/"],
+            ["Banner of Truth", "https://banneroftruth.org/us/"],
+            ["Reformed Christian Books", "https://reformedchristianbooks.com/"]
+        ],
+
+        "channels": [
+            ["Ligonier", "https://www.youtube.com/@ligonier"],
+            ["Southern Baptist Theological Seminary", "https://www.youtube.com/@SouthernSeminary"],
+            ["WORLD Watch News", "https://www.youtube.com/@WORLDWatchNews"],
+            ["Desiring God", "https://www.youtube.com/@desiringGod"],
+            ["9Marks", "https://www.youtube.com/@IXMarks"]
+        ],
+
+        "podcasts": [
+            ["Renewing Your Mind", "https://podcasts.apple.com/us/podcast/renewing-your-mind-with-r-c-sproul/id110916650?mt=2"],
+            ["The Briefing", "https://podcasts.apple.com/us/podcast/the-briefing-albertmohler-com/id390278738"],
+            ["The World and Everything in It", "https://podcasts.apple.com/us/podcast/the-world-and-everything-in-it/id454755642"],
+            ["Breakpoint", "https://podcasts.apple.com/us/podcast/breakpoint/id324173353"],
+            ["The Modern Puritan", "https://podcasts.apple.com/us/podcast/the-modern-puritan/id1687339454"],
+            ["Grace to You", "https://podcasts.apple.com/us/podcast/grace-to-you-radio-podcast/id292681379"],
+            ["Five Minutes in Church History", "https://podcasts.apple.com/us/podcast/5-minutes-in-church-history-with-stephen-nichols/id684370851"],
+            ["The Sword & The Trowel", "https://podcasts.apple.com/us/podcast/the-sword-the-trowel/id1334359794"],
+            ["On Preaching with H.B. Charles Jr.", "https://podcasts.apple.com/us/podcast/on-preaching-with-h-b-charles-jr/id888503224"]
+        ],
+
+        "music": [
+            ["Sovereign Grace Music", "https://sovereigngracemusic.com/"],
+            ["CityAlight", "https://cityalight.com/"],
+            ["Getty Music", "https://www.gettymusic.com/"],
+            ["MBC on Spotify", "https://open.spotify.com/playlist/2DOa8yuH4viYfkdx3vKXWs?si=abda3385b46c43c5"],
+            ["MBC on Amazon Music", "https://music.amazon.com/user-playlists/d7343a2f615e40e6876764bcf5201c96sune?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_PihqMeWAVpEuEVFlGB2hhP187"],
+            ["MBC on YouTube", "https://youtube.com/playlist?list=PLWn9C8rHG45WxApQG0iVpiCWdmVrwJfmd&si=r_kJv_qmPIMSonwK"],
+            ["MBC Kids on Spotify", "https://open.spotify.com/playlist/0wvVFqgLpmpy4d8aJhh6Xl?si=b2273810dfe042d1"],
+            ["MBC Kids on Amazon Music", "https://music.amazon.com/user-playlists/1cf2a9645a12425aa44cfa26eea7d0fdsune?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_wNWy6QIVztOUA0xiHSFUSSNtz"],
+            ["MBC on YouTube", "https://youtube.com/playlist?list=PLWn9C8rHG45Uj1N1y7dvyyO9aRo8dlRkg&si=vEgQLnV9bDDncTAv"]
+        ]
+    }
+}

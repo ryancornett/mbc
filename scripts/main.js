@@ -69,7 +69,3 @@ creditLink.textContent = "Ryan Cornett";
 credit.appendChild(creditLink);
 credit.insertAdjacentText('beforeend', ` | All rights reserved 2021-${year} Manchester Baptist Church`);
 
-// localStorage.setItem('foo', 'bar');
-// let check = localStorage.getItem('foo');
-// console.log(check);
-// localStorage.removeItem('foo');

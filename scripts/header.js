@@ -51,8 +51,13 @@ const SLIDER_DIV = document.querySelector('.slider');
 const SOCIAL_MEDIA_ICONS = document.getElementById('social-media-icons-links');
 const BACKGROUND_2 = document.querySelectorAll('.background-2');
 const FOOTER = document.querySelector('footer');
-const themeElements = [switcher, nav, main, SLIDER_DIV, SOCIAL_MEDIA_ICONS, FOOTER];
+const TO_TOP = document.querySelector('.to-top');
+const themeElements = [switcher, nav, main, SLIDER_DIV, SOCIAL_MEDIA_ICONS, FOOTER, TO_TOP];
+
 let lightTheme = true;
+if (localStorage.getItem('preferredTheme') == "dark") {
+    switchTheme();
+}
 
 function switchTheme() {
     for (let i=0; i<themeElements.length; i++) {
@@ -64,13 +69,19 @@ function switchTheme() {
     if (lightTheme) {
         switcherIcon.setAttribute('src', "images/sun.webp")
         lightTheme = false;
-    
+        localStorage.setItem('preferredTheme', 'dark');
     } else {
         switcherIcon.setAttribute('src', "images/moon.webp");
         lightTheme = true;
+        localStorage.setItem('preferredTheme', 'light');
     }
 }
 
 switcher.addEventListener('click', () => {
     switchTheme();
 });
+
+const drawer = document.querySelector('.drawer');
+const openButton = document.querySelector('#hamburger');
+
+openButton.addEventListener('click', () => drawer.classList.toggle('open'));
