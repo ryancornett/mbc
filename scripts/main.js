@@ -1,12 +1,23 @@
 "use strict";
 
 import { populatePrayerRequests, populateServiceInfo } from './info-fetches.js'
+import { Modals } from './modals.js'
+import { Countdown } from './countdown.js';
+import { Header } from './header.js';
+Header();
+import getCurrentWeather from "./weather.js";
+await getCurrentWeather();
 
-populatePrayerRequests();
+let pageId = document.getElementById('page-id').classList.value;
 
-populateServiceInfo();
+if (pageId == 'index') {
+    populatePrayerRequests();
+    populateServiceInfo();
+    Modals();
+    Countdown();
+}
 
-const topButton = document.getElementById('to-top');
+let topButton = document.getElementById('to-top');
 function displayTopButton() {
     if (window.scrollY >= 550) {
         topButton.classList.add('visible');
@@ -39,21 +50,6 @@ let options = {
   targets.forEach(target => {
   observer.observe(target);
   });
-
-// >>> EVERY PAGE GETS A PAGE ID TO FACILITATE THE BELOW SWITCH/CASE TO DETERMINE THE ELEMENTS ARRAY FOR THEME SWITCHING <<<
-
-// CHANGE pageElements to a parameter with each page's corresponding elements array
-
-let pageId = document.getElementById('page-id').classList.value;
-
-switch (pageId) {
-    case 'index': // switchPage(indexElements); break;
-    case 'salvation': // switchPage(salvationElements); break;
-    case 'history': // switchPage(historyElements); break;
-    case 'beliefs': // switchPage(beliefsElements); break;
-}
-
-// >>> EVERY PAGE GETS A PAGE ID TO FACILITATE THE ABOVE SWITCH/CASE TO DETERMINE THE ELEMENTS ARRAY FOR THEME SWITCHING <<<
 
 const credit = document.querySelector('.credit');
 const current = new Date();

@@ -1,0 +1,33 @@
+main {
+    padding: 2rem 6rem;
+}
+
+.salvation-main > h5 {
+    font-family: var(--cursive);
+    font-size: clamp(var(--fs-500), 10vh, var(--fs-900));
+}
+
+.salvation-main > h6 {
+    font-family: var(--serif);
+    font-size: clamp(var(--fs-200), 3vh, var(--fs-600));
+    margin: 2rem auto;
+}
+
+.salvation-main > h6 + p {
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.question {
+    font-size: 1.2rem;
+}
+
+.answer {
+    margin: 1.5rem;
+    font-weight: bold;
+}
+
+.bible-reference {
+    font-style: italic;
+    margin-bottom: 0.75rem;
+}
