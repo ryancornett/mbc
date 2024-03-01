@@ -66,7 +66,6 @@ export default async function(container) {
 
     const map = document.createElement('iframe');
     map.title = 'map';
-    map.width = '40%';
     map.height = '300';
     map.src = 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3179.864664989327!2d-83.76327206717397!3d37.155917382030104!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8843529f938b7a8d%3A0x223c84ae2263dc52!2sManchester%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1708372351721!5m2!1sen!2sus';
     map.allowfullscreen = '';

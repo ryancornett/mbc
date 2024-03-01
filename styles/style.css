@@ -400,6 +400,11 @@ main.dark {
   cursor: pointer;
 }
 
+.about-section:hover {
+  scale: 1.025;
+  transition: all ease 200ms;
+}
+
 .about-section > p {
   color: white;
   font-size: var(--fs-700);
@@ -784,6 +789,7 @@ footer > .row-2 > iframe {
     height: 35vh;
     width: 35%;
     background-size: cover;
+    transition: all ease 200ms;
   }
 
   .deacon-columns {
@@ -880,6 +886,7 @@ footer > .row-2 > iframe {
   }
   
   .row-2 > iframe {
+    width: 40%;
     margin: 0 6rem;
   }
   

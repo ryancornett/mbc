@@ -1,12 +1,12 @@
 "use strict";
 
 import { populatePrayerRequests, populateServiceInfo } from './info-fetches.js'
-import Modals from './Modals.js'
-import Countdown from './Countdown.js';
-import Header from './Header.js';
-import Weather from "./Weather.js";
+import Modals from './modals.js'
+import Countdown from './countdown.js';
+import Header from './header.js';
+import Weather from "./weather.js";
 import { Confession, History } from './data.js';
-import Footer from './Footer.js';
+import Footer from './footer.js';
 
 Header();
 
