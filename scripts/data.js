@@ -5,9 +5,6 @@ import history from "../data/history.json" assert { type: "json" };
 import constitution from "../data/constitution.json" assert { type: "json" };
 import bylaws from "../data/bylaws.json" assert { type: "json" };
 
-// *** BEGIN CONFESSION ***
-const confessionContainer = document.querySelector('.confession');
-
 function populateChapterSections(container, index) {
     for (let i = 0; i < confession.data[index].text.length; i++) {
         let section = document.createElement('div');
@@ -22,7 +19,7 @@ function populateChapterSections(container, index) {
     }
 }
 
-function populateChapters(index) {
+function populateChapters(container, index) {
     let chapterDiv = document.createElement('div');
     chapterDiv.setAttribute('class', 'chapter');
     let chapterTitleCard = document.createElement('div');
@@ -40,47 +37,63 @@ function populateChapters(index) {
     chapterSections.setAttribute('class', 'chapter-sections');
     populateChapterSections(chapterSections, index)
     chapterDiv.appendChild(chapterSections);
-    confessionContainer.appendChild(chapterDiv);
+    container.appendChild(chapterDiv);
 }
 
-for (let i = 0; i < confession.data.length; i++) {
-    populateChapters(i);
-};
+function Confession(container) {
+  for (let i = 0; i < confession.data.length; i++) {
+    populateChapters(container, i);
+  };
 
-// *** BEGIN EXPANDABLES ***
+  let chapterTitles = document.querySelectorAll('.chapter-title-card');
+  let plusSign = document.querySelectorAll('.chapter-plus-x');
+  let chapterSections = document.querySelectorAll('.chapter-sections');
+  let expandables = [chapterTitles, plusSign, chapterSections];
 
-let chapterTitles = document.querySelectorAll('.chapter-title-card');
-let plusSign = document.querySelectorAll('.chapter-plus-x');
-let chapterSections = document.querySelectorAll('.chapter-sections');
-let expandables = [chapterTitles, plusSign, chapterSections];
-
-function collapseAll(position) {
-  for (let i=0; i < expandables.length; i++) {
-    expandables[i][position].classList.remove('active');
-  }
-}
-
-function expandCard(position) {
-for (let i=0; i < expandables.length; i++) {
-    expandables[i][position].classList.add('active');
-  }
-}
-
-chapterTitles.forEach((chapterTitle, index) => {
-    chapterTitle.addEventListener('click', () => {
-        if (chapterTitle.classList.contains('active')) {
-        for (let i = 0; i < chapterTitles.length; i++) {
-            collapseAll(i);
-        }
-        } else {        
-        for (let j = 0; j < chapterTitles.length; j++) {
-            collapseAll(j);
-            expandCard(index);
-        }    
+  function collapseAll(position) {
+    for (let i=0; i < expandables.length; i++) {
+      expandables[i][position].classList.remove('active');
     }
-  })
-});
+  }
 
-// *** END EXPANDABLES ***
+  function expandCard(position) {
+  for (let i=0; i < expandables.length; i++) {
+      expandables[i][position].classList.add('active');
+    }
+  }
 
-// ***** END CONFESSION *****
+  chapterTitles.forEach((chapterTitle, index) => {
+      chapterTitle.addEventListener('click', () => {
+          if (chapterTitle.classList.contains('active')) {
+          for (let i = 0; i < chapterTitles.length; i++) {
+              collapseAll(i);
+          }
+          } else {        
+          for (let j = 0; j < chapterTitles.length; j++) {
+              collapseAll(j);
+              expandCard(index);
+          }    
+      }
+    })
+  });
+}
+
+async function History(container) {
+  for (let i = 0; i < history.data.length; i++) {
+      let section = document.createElement('section');
+      section.classList.add('history-section')
+      container.appendChild(section);
+
+      let period = document.createElement('h5');
+      period.textContent = history.data[i].title;
+      section.appendChild(period);
+
+      for (let j = 0; j < history.data[i].text.length; j++) {
+        let paragraph = document.createElement('p');
+        paragraph.textContent = history.data[i].text[j];
+        section.appendChild(paragraph);
+      }
+  }
+}
+
+export { Confession, History };

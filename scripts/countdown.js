@@ -1,4 +1,4 @@
-function Countdown() {
+export default function() {
     function getTargetTime() {
         const now = new Date();
         const dayOfWeek = now.getDay();
@@ -51,5 +51,3 @@ function Countdown() {
       
     const interval = setInterval(updateCountdown, 1000);
 }
-
-export { Countdown };

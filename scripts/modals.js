@@ -1,6 +1,6 @@
 "use strict"
 
-function Modals() {
+export default function() {
     (function Ministries() {
         const MINISTRIES = document.querySelector('.ministries-modal');
         const openMinistries = document.querySelector('.open-ministries');
@@ -25,5 +25,3 @@ function Modals() {
         openResources.addEventListener('click', () => RESOURCES.show());
     })();
 }
-
-export { Modals };

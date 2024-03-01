@@ -1,12 +1,14 @@
 "use strict";
 
 import { populatePrayerRequests, populateServiceInfo } from './info-fetches.js'
-import { Modals } from './modals.js'
-import { Countdown } from './countdown.js';
-import { Header } from './header.js';
+import Modals from './Modals.js'
+import Countdown from './Countdown.js';
+import Header from './Header.js';
+import Weather from "./Weather.js";
+import { Confession, History } from './data.js';
+import Footer from './Footer.js';
+
 Header();
-import getCurrentWeather from "./weather.js";
-await getCurrentWeather();
 
 let pageId = document.getElementById('page-id').classList.value;
 
@@ -15,6 +17,16 @@ if (pageId == 'index') {
     populateServiceInfo();
     Modals();
     Countdown();
+}
+
+const confessionContainer = document.querySelector('.confession-container');
+if (confessionContainer != null) {
+    Confession(confessionContainer);
+}
+
+const historyContainer = document.querySelector('.history-container');
+if (historyContainer != null) {
+    await History(historyContainer);
 }
 
 let topButton = document.getElementById('to-top');
@@ -51,17 +63,24 @@ let options = {
   observer.observe(target);
   });
 
-const credit = document.querySelector('.credit');
-const current = new Date();
-const year = current.getFullYear();
-const preCredit = document.createElement('span');
-preCredit.textContent = "Website by ";
-credit.appendChild(preCredit);
-const creditLink = document.createElement('a');
-creditLink.setAttribute('href', "https://linktr.ee/ryancornett");
-creditLink.setAttribute('alt', "Ryan Cornett's LinkTree page");
-creditLink.classList.add("footer-link")
-creditLink.textContent = "Ryan Cornett";
-credit.appendChild(creditLink);
-credit.insertAdjacentText('beforeend', ` | All rights reserved 2021-${year} Manchester Baptist Church`);
+function websiteCredit() {
+    const credit = document.querySelector('.credit');
+    const current = new Date();
+    const year = current.getFullYear();
+    const preCredit = document.createElement('span');
+    preCredit.textContent = "Website by ";
+    credit.appendChild(preCredit);
+    const creditLink = document.createElement('a');
+    creditLink.setAttribute('href', "https://linktr.ee/ryancornett");
+    creditLink.setAttribute('alt', "Ryan Cornett's LinkTree page");
+    creditLink.classList.add("footer-link")
+    creditLink.textContent = "Ryan Cornett";
+    credit.appendChild(creditLink);
+    credit.insertAdjacentText('beforeend', ` | All rights reserved 2021-${year} Manchester Baptist Church`);
+}
 
+
+const footerElement = document.querySelector('footer');
+await Footer(footerElement);
+await Weather();
+websiteCredit();

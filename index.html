@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="styles\style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/themes/light.css" />
         <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/shoelace-autoloader.js"></script>
-
     </head>
+
     <body id="top">
         <div class="mobile-banner">
             <h2>Manchester Baptist Church</h2>
@@ -20,7 +20,6 @@
 
         <div class="drawer">
             <nav>
-                <!-- populated with js in header.js -->
             </nav>
         </div>
 
@@ -123,60 +122,12 @@
         </main>
 
         <footer id="footer-div">
-            <div class="row-1">
-                <div class="footer-schedule col-1">
-                    <ul>
-                        <li>Sundays</li>
-                        <li>9:30 AM Fellowship Breakfast</li>
-                        <li>10:00 AM Sunday School</li>
-                        <li>11:00 AM Morning Worship Service</li>
-                        <li>6:00 PM Evening Worship Service</li>
-                    </ul>
-                </div>
-
-                <img src="images/diamond_white.webp" alt="MBC Diamond logo" class="diamond" />
-
-                <div class="footer-schedule">
-                    <ul>
-                        <li>Wednesdays</li>
-                        <li>6:00 PM Prayer & Bible Study</li>
-                        <li>6:00 PM Youth Groups</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="row-2">
-                <div class="weather">
-                    <h6 class="place">Currently in Manchester, KY:</h6>
-                    <div id="current-weather">
-
-                    </div>
-                </div>
-
-                <iframe title="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3179.864664989327!2d-83.76327206717397!3d37.155917382030104!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8843529f938b7a8d%3A0x223c84ae2263dc52!2sManchester%20Baptist%20Church!5e0!3m2!1sen!2sus!4v1708372351721!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                <div id="footer-social-media-icons-links">
-                    <a href="https://www.facebook.com/mbcserves/" aria-label="MBC Facebook page"><img aria-label="Facebook icon" src="images/facebook.webp
-                        " /></a>
-                    <a href="https://twitter.com/mbcserves/" aria-label="MBC Twitter/X page"><img aria-label="Twitter/X icon" src="images/twitter-x.webp
-                        " /></a>
-                    <a href="https://www.instagram.com/mbcserves" aria-label="MBC Instagram page"><img aria-label="Instagram icon" src="images/instagram.webp
-                        " /></a>
-                    <a href="https://www.youtube.com/channel/UCr0VXQX3Iq18VLojGWeuRUw/featured" aria-label="MBC YouTube page"><img aria-label="YouTube icon" src="images/youtube.webp
-                        " /></a>
-                </div>
-
-            </div>
-
-            <div class="credit">
-
-            </div>
-
+            
         </footer>
 
         <div class="to-top" id="to-top"><a href="#top"><sl-icon name="arrow-up-circle"></sl-icon></a></div>
 
-        <sl-dialog label="Ministries" class="ministries-modal" style="--width: 80vw;">
+        <sl-dialog class="ministries-modal" style="--width: 80vw;">
             <div class="ministries-list">
                 <p>Hospitality (funerals, community meals, etc.)</p>
                 <p>Woman on Mission (monthly, varying Mondays)</p>
@@ -186,7 +137,7 @@
             </div>
         </sl-dialog>
 
-        <sl-dialog label="Leadership" class="leadership-modal" style="--width: 80vw;">
+        <sl-dialog class="leadership-modal" style="--width: 80vw;">
             <div class="leadership">
                 <div class="elders">
                     <h5>Elders</h5>
@@ -216,7 +167,7 @@
             </div>
         </sl-dialog>
 
-        <sl-dialog label="Schedule" class="schedule-modal" style="--width: 80vw;">
+        <sl-dialog class="schedule-modal" style="--width: 80vw;">
             <div class="schedule">
                 <h5>Sundays</h5>
                 <p>9:30 AM Fellowship Breakfast</p>
@@ -231,13 +182,13 @@
             </div>
         </sl-dialog>
 
-        <sl-dialog label="Resources" class="resources-modal" style="--width: 80vw;">
+        <sl-dialog class="resources-modal" style="--width: 80vw;">
             <div class="resource-links">
-                <i>links coming soon</i>
-                <p>Philadelphia Confession of Faith, 1742</p>
-                <p><a href="https://bfm.sbc.net/bfm2000/" target="_blank">Baptist Faith & Message</a></p>
-                <p>Church Constitution & Bylaws</p>
-                <p>Elders' Recommended Resources</p>
+                <a href="confession.html">Philadelphia Confession of Faith, 1742</a>
+                <a href="https://bfm.sbc.net/bfm2000/" target="_blank">Baptist Faith & Message</a>
+                <a href="recommended.html">Elders' Recommended Resources</a>
+                <a href="constitution.html">Church Constitution & Bylaws</a>
+                <a href="history.html">Church History</a>
             </div>
         </sl-dialog>
 

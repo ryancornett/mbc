@@ -77,4 +77,4 @@ async function populateServiceInfo() {
     serviceInfoDiv.innerHTML = htmlString;
 }
 
-export { populatePrayerRequests, populateServiceInfo }
+export { populatePrayerRequests, populateServiceInfo };

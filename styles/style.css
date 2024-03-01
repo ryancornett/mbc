@@ -425,6 +425,12 @@ main.dark {
   margin-top: 1rem;
 }
 
+.resource-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
 .schedule > h5, .schedule > p {
   margin-bottom: 1rem;
 }
@@ -467,6 +473,10 @@ main.dark {
 
 .viewport-100 > h6 {
   display: none;
+}
+
+iframe {
+  border: none;
 }
 
 #contact-us > iframe {

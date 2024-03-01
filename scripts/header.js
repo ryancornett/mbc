@@ -1,6 +1,6 @@
 "use strict";
 
-function Header() {
+export default function() {
     const nav = document.querySelector('nav');
     const banner = document.createElement('div');
     banner.classList.add('banner');
@@ -52,6 +52,7 @@ function Header() {
     const BACKGROUND_2 = document.querySelectorAll('.background-2');
     const FOOTER = document.querySelector('footer');
     const TO_TOP = document.querySelector('.to-top');
+
     const themeElements = [switcher, nav, main, SOCIAL_MEDIA_ICONS, FOOTER, TO_TOP];
     
     let lightTheme = true;
@@ -60,6 +61,7 @@ function Header() {
     }
     
     function switchTheme() {
+        const CHAPTER_TITLE_CARD = document.querySelectorAll('.chapter-title-card');
         for (let i=0; i<themeElements.length; i++) {
             if (themeElements[i] != null) {
                 themeElements[i].classList.toggle('dark');
@@ -70,6 +72,13 @@ function Header() {
                 bg.classList.toggle('dark');
             })
         }
+
+        if (CHAPTER_TITLE_CARD != null) {
+            CHAPTER_TITLE_CARD.forEach(ctc => {
+                ctc.classList.toggle('dark');
+            })
+        }
+
         if (lightTheme) {
             switcherIcon.setAttribute('src', "images/sun.webp")
             lightTheme = false;
@@ -90,5 +99,3 @@ function Header() {
     
     openButton.addEventListener('click', () => drawer.classList.toggle('open'));
 }
-
-export { Header };

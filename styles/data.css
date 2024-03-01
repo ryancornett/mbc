@@ -7,15 +7,14 @@ body {
     --expand-400: #bbb;
     --expand-600: #999;
     --expand-800: #777;
+    --expand-dark-950: #333;
+    --expand-dark-900: #444;
+    --expand-dark-850: #555;
+    --expand-dark-800: #666;
   }
 
-.confession {
-    width: 50vw;
-    margin: 2rem auto 2rem 2rem;
-}
-
 .chapter {
-    margin: 1rem 0;
+    margin: 1.2rem 0;
 }
 
 .chapter-title {
@@ -35,9 +34,19 @@ body {
     transition: all 250ms ease-in-out;
     height: auto;
   }
+
+  .chapter-title-card.dark {
+    background-color: var(--expand-dark-900);
+    transition: all 250ms ease-in-out;
+  }
   
   .chapter-title-card:hover {
     background-color: var(--expand-400);
+    transition: all 250ms ease-in-out;
+  }
+
+  .chapter-title-card.dark:hover {
+    background-color: var(--expand-dark-950);
     transition: all 250ms ease-in-out;
   }
   
@@ -46,9 +55,19 @@ body {
     color: white;
     transition: all 150ms linear;
   }
+
+  .chapter-title-card.dark.active {
+    background-color: var(--expand-dark-850);
+    transition: all 150ms linear;
+  }
   
   .chapter-title-card.active:hover {
     background-color: var(--expand-600);
+    transition: all 250ms ease-in-out;
+  }
+
+  .chapter-title-card.dark.active:hover {
+    background-color: var(--expand-dark-800);
     transition: all 250ms ease-in-out;
   }
     
@@ -99,4 +118,32 @@ body {
 
   .chapter-sections.active > .chapter-section > p {
     margin: 0.65rem 0 1.25rem 0;
+}
+
+/* HISTORY */
+
+.history-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.history-section {
+  margin: 2rem auto;
+}
+
+.history-section > p {
+  padding: 0.5rem;
+}
+
+@media (min-width: 920px) {
+  .confession-container {
+    max-width: 70vw;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+
+  .history-section > p {
+    width: 75ch;
+  }
 }

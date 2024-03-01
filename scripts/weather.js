@@ -1,4 +1,4 @@
-export default async function getCurrentWeather() {
+export default async function() {
     const weatherDescriptions = {
         '0':'Clear',
         '1':'Mostly Clear',
