@@ -3,8 +3,7 @@ main {
 }
 
 .salvation-main > h5 {
-    font-family: var(--cursive);
-    font-size: clamp(var(--fs-500), 10vh, var(--fs-900));
+    font-size: clamp(var(--fs-500), 6vh, var(--fs-900));
 }
 
 .salvation-main > h6 {

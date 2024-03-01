@@ -5,8 +5,8 @@ import Modals from './modals.js'
 import Countdown from './countdown.js';
 import Header from './header.js';
 import Weather from "./weather.js";
-import { Confession, History } from './data.js';
-import Footer from './footer_component.js';
+import { Confession, History, Resources } from './data.js';
+import Footer from './footerComponent.js';
 
 Header();
 
@@ -27,6 +27,11 @@ if (confessionContainer != null) {
 const historyContainer = document.querySelector('.history-container');
 if (historyContainer != null) {
     await History(historyContainer);
+}
+
+const recommendedContainer = document.querySelector('.recommended-container');
+if (recommendedContainer != null) {
+    await Resources(recommendedContainer);
 }
 
 let topButton = document.getElementById('to-top');

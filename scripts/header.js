@@ -79,6 +79,13 @@ export default function() {
             })
         }
 
+        const recommendedResourceLinks = document.querySelectorAll('.recommended-resource-links');
+        if (recommendedResourceLinks != null) {
+            recommendedResourceLinks.forEach(rrl => {
+                rrl.classList.toggle('dark');
+            })
+        }
+
         if (lightTheme) {
             switcherIcon.setAttribute('src', "images/sun.webp")
             lightTheme = false;

@@ -136,6 +136,27 @@ body {
   padding: 0.5rem;
 }
 
+.recommended-main {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.recommended-container > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommended-resource-links {
+  font-family: var(--serif);
+  padding-bottom: 0.3rem;
+  color: black;
+}
+
+.recommended-resource-links.dark {
+  color: white;
+}
+
 @media (min-width: 920px) {
   .confession-container {
     max-width: 70vw;
@@ -145,5 +166,13 @@ body {
 
   .history-section > p {
     width: 75ch;
+  }
+
+  .recommended-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 2rem;
+    row-gap: 2rem;
   }
 }
