@@ -6,7 +6,7 @@ import Countdown from './countdown.js';
 import Header from './header.js';
 import Weather from "./weather.js";
 import { Confession, History } from './data.js';
-import Footer from './footer.js';
+import Footer from './footer_component.js';
 
 Header();
 
