@@ -856,7 +856,7 @@ let confession = {
             ]
         }
     ]
-  }
+  };
   
   let history = {
     "meta": {
@@ -899,7 +899,7 @@ let confession = {
             "text": ["In October, 2009, the church hired Jimmy Dezarn as part-time youth minister and Ryan Cornett as part-time children's minister. In 2011, Allen Roberts was installed as Assistant Pastor. In January, 2017, Carl Varney was hired as part-time student minister to combine both the children's and youth ministry.", "In August, 2018, Allen Roberts was installed as pastor of our sister church, Lyttleton Baptist Church.", "In October, 2018, three men presented themselves as candidates for the office of elder: John Rice, the Chairperson of the deacons at the time, Carl Varney, and Ryan Cornett. In April, 2019, they were publicly examined and unanimously approved for installation by the church. In 2019, John Hensley and Brian Lewis were ordained as deacons.", "In February, 2020, in a regular business meeting the church voted to appoint Pastor Ryan Cornett as choir leader.", "In late March 2020, MBC suspended in-person indoor services due to the COVID-19 pandemic. Over the next several months, the church would meet via drive-in services outside the Clay County Community Center (Crawdad Building) in the parking lot. Sunday and Wednesday evening services were suspended, and resumed shortly thereafter as virtual meetings using Zoom and Facebook Live.", "On Sunday, August 1, 2021, the church sent out elder Carl Varney and his family with tears and love. Carl and his family moved to Richmond, KY. The church blessed Carl and his family as they would live and serve there.", "On Wednesday, September 1, 2021, the church unanimously approved elder Ryan Cornett as her assistant pastor in an unprecedented vote-by-internet-message necessitated by a surging COVID-19 outbreak in Clay County.", "In early 2023, Jimmy Dezarn and Fred Rogers were ordained as deacons. The following deacons also currently serve: Charles Goins, Butch Grubb, Mike Baker, Larry Day, Donnie Hacker, Charles D. Keith, and Brian Lewis."]
         }
     ]
-  }
+  };
   
   let constitution = {
     "meta": {
@@ -1014,9 +1014,198 @@ let confession = {
             ]
         }
     ]
-  }
+  };
 
-  let bylaws = "";
+  let bylaws = {
+    "meta": {
+        "created": "8-15-2023",
+        "updated": "3-1-2024"
+    },
+    
+    "data": [
+        {
+            "title": "Article I - Membership",
+            "meta": [{"underline": [0, 2, 4, 14, 16, 18]}, {"span": [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]}, {"indent": [6, 8, 10, 12]}, {"italics": [6, 8, 10, 12]}],
+            "text": [
+                "Section 1.",
+
+                "Members - This church includes persons who profess a personal faith and believe in the Lord Jesus Christ, have received baptism in a church according to the New Testament, and actively follow the Lord Jesus Christ in discipleship.",
+
+                "Section 2.",
+
+                "Voting rights of Members - Every member of the church, eighteen years of age or older is entitled to vote at all elections and on all questions submitted to the church in conference, provided the member is present. Proxy voting is prohibited.",
+                
+                "Section 3.",
+                
+                "Reception - A person shall be considered a member upon approval of the church membership. A person may be received for membership by any of the following ways:",
+                
+                "1. By profession of faith.",
+                
+                "A person publicly, confessing personal faith in the Lord Jesus Christ, giving evidences of a regenerate heart and adopting the covenant and the articles of faith and practices held by the church, shall, upon baptism be admitted into the fellowship of the church.",
+                
+                "2. By Statement.",
+                
+                "Any person who has been baptized upon a profession of faith in a church of like faith and order but who, because of loss of records or similarly unavoidable circumstances, has no letter of dismissal, may be received into membership after giving satisfactory evidence of a regenerate heart, Christian conduct and scriptural faith. Any person presented for membership who has been baptized by immersion in a church of like faith and order shall be received by statement.",
+                
+                "3. By Letter.",
+                
+                "Any person from another church of like faith and order may be received into membership upon receipt of a letter of transfer from that respective church.",
+                
+                "4. By baptism from another denomination.",
+                
+                "Any person who professes a personal faith in the Lord Jesus Christ and actively follows the Lord Jesus Christ in discipleship but has been baptized by any method other than immersion in another church must be immersed to become a member of this body.",
+                
+                "Section 4.",
+                
+                "New Member Orientation - New Church members will be required to participate in the church's new members' orientation program as developed and implemented by the church.",
+                
+                "Section 5.",
+                
+                "Rights of Members - Every member of the church, eighteen years of age or older is entitled to vote at all elections and on all questions submitted to the church in conference, provided the member is present. Every member of the church is eligible for consideration by the membership as candidates for the elective offices in the church. Every member of the church may participate in the ordinances of the church as administered by the church.",
+                
+                "Section 6.",
+                
+                "Termination of Membership - Membership shall be terminated in the following ways; (1) death, (2) transfer by letter to another church of like faith and order, (3) acknowledgment when a member has joined a church of another faith and order, (4) exclusion by action of this church."
+            ]
+        },
+    
+        {
+            "title": "Article II - Church Staff and Officers",
+            "text": [
+                
+                "All church staff and officers, as listed below, must be members of the church. The church officers must be a member of Manchester Baptist Church for at least one year prior to nomination, at least eighteen years of age and of good moral character.",
+            
+                "Section 1. Pastor/Pastoral Staff - When a vacancy occurs in the position of pastor a Search Committee is to be formed by the nomination of three persons by the Nominating Committee and elected by the church. At least one shall be a deacon.",
+                
+                "The committee will present only one candidate at a time. For election a candidate must receive 85 percent of the votes cast. Ministerial pastoral staff will be recommended by the Pastor, the Elders and the Deacons. The individual will be called with an 85 percent vote. Should dismissal of a pastor or ministerial staff member become necessary, a simple majority vote of members present will be necessary. This consideration can only be done when all possible attempts at reconciliation have been exhausted. Proper notice of this vote will be made known to members of the congregation at least two weeks in advance of the vote.",
+                
+                "Section 2. Elders",
+                
+                "Section 3. Deacons/Trustees - The Deacons of Manchester Baptist Church shall serve as trustees. The trustees shall hold church property in trust and affix their signature to legal documents that are required by action of the church body, including but not limited to the purchase, sale, mortgage, or rental of real property. Where only one signature is required on a document, a trustee selected by the group will affix his signature to the document. The trustees shall have no power to purchase, sell, mortgage, or rent property without a specific vote of the church authorizing such action. The trustees shall oversee any and all repair or construction work that is being done or needs to be done at the church and give a report relevant to same that the quarterly business meeting if necessary. The chairman of deacons shall also serve as chairman of the trustees. Trustee meetings will be held at the discretion of the pastor, or chairman of deacons.",
+                
+                "Section 4. Moderator - The chairman of deacons shall serve as moderator at all business meetings of the church. In his absence, the pastor, a member of the ministerial staff, or a deacon shall serve as moderator.",
+                
+                "Section 5. Church Clerk - The church clerk shall be nominated by the Nominating Committee and elected annually by the church. It is the duty of the clerk or someone representing him/her to attend all business meetings and special called meetings of the church. The clerk shall keep an updated record of all minutes and make the minutes available prior to the next regularly scheduled business meeting. The clerk is to issue letters of dismissal as voted by the church, maintain an accurate register of members, with dates of admission and termination of membership, and work in cooperation with the church secretary in maintaining all other official reports, such as baptismal dates.",
+                
+                "Section 6. Treasurer - The treasurer shall be nominated by the Nominating Committee and elected annually by the church. The treasurer shall serve as a member of the Finance Committee and shall have signature authority on all accounts. The duties of the treasurer include overseeing the preparation of financial statements, initiating the annual review of financial records, supervising investments, accounts payable, payroll, general ledger, and other accounting procedures such as tax returns and contribution statements according to the Internal Revenue Service guidelines.",
+                
+                "Section 7. Secretary and Support Staff - All support staff shall work at the call of the Personnel Committee or Deacons with recommendation of the pastor.",
+                
+                "Section 8. Sunday School Teachers",
+                
+                "Section 9. Youth Leaders"
+            ]
+        },
+    
+        {
+            "title": "Article III - Church Meetings",
+            "text": [
+                "Section 1. Worship Services - The church shall meet regularly each Sunday morning, Sunday evening and Wednesday evening for preaching, instruction, evangelism and for the worship of Almighty God. These meetings will be open to everyone and shall be conducted under the direction of the pastor and/or the elders. Exceptions can be made by recommendation of the deacons.",
+                
+                "Section 2. Special Service - All church meetings which are essential to the promotion of the objectives of the church shall be placed on the church calendar, published in the church bulletin at least once prior to the meeting being held and announced at all services on the Sunday prior to the special service being held.",
+                
+                "Section 3. Regular Business Meetings - Regular business meetings shall be held the first Sunday evening of December, March, June and September to coincide with the beginning of each new Sunday School quarter. Matters of a significant nature must be publicized as in section 4.",
+                
+                "Section 4. Special Business Meetings - A specially called business meeting may be held to consider matters of a significant nature. Notice of the subject, date, time and location must be published in the church bulletin for the special call business meeting at least one week before the meeting and announced at all services on the Sunday prior to the special business meeting.",
+                
+                "Section 5. Quorum - A quorum consists of those members who attend the business meeting, provided it is a regular meeting or one that has been properly called.",
+                
+                "Section 6. Parliamentary Rules - The current edition of “Robert's Rules of Order” shall be the authority for parliamentary rules of procedure for all business meetings of the church in areas not addressed by this constitution and bylaws. The moderator, who shall be the Chairman of deacons, shall appoint a vice moderator to serve in his absence."
+            ]
+        },
+    
+        {
+            "title": "Article IV - Ordinances",
+            "text": [
+                "Section 1. Baptism - Baptism is a symbolic act of obedience. A person who receives Jesus Christ as Savior by personal faith, who professes Him publicly at any worship service, and who indicates a commitment to follow Christ as Lord, shall be received for baptism.",
+                
+                "1) Baptism shall be by immersion in water.",
+                
+                "2) Baptism may be administered by the Pastor or whomever he shall authorize.",
+                
+                "3) Baptism shall be administered as an act of worship during any worship service.",
+                
+                "4) Baptism shall be as soon as possible after completion of the New Member Orientation Program.",
+                
+                "Section 2. The Lord's Supper - The Lord's Supper is a symbolic act of obedience whereby members of the church, through partaking of the bread and fruit of the vine, commemorate the death of Jesus Christ and anticipate his second coming.",
+                
+                "1) The Lord's Supper shall be observed on the first Sunday of each month.",
+                
+                "2) The pastor, the elders, and the deacons shall be responsible for administration of the Lord's Supper."]
+        },
+    
+        {
+            "title": "Article V - Program Organizations",
+            "text": [
+                "All program organizations of the church shall be under church control, all officers being members of the church, elected by the church, and reporting regularly to the church.",
+                
+                "Section 1. - Sunday School",
+                
+                "Section 2. - Discipleship Training",
+                
+                "Section 3. - Mission Groups",
+                
+                "Section 4. - Music Ministry",
+                
+                "Section 5. - Youth Groups",
+                
+                "Section 6. - Outreach"
+            ]
+        },
+    
+        {
+            "title": "Article VI - Ministries",
+            "text": [
+                "The church shall evaluate, plan, organize and implement such ministries as the church deems necessary, by guidance of the Holy Spirit."]
+        },
+    
+        {
+            "title": "Article VII - Committees",
+            "text": [
+                "The church shall elect such committees as the church deems necessary. Committee members must be members of the church and shall serve on a rotating basis for a three-year term.",
+                
+                "Committee Structure - There shall be three standing committees: The Finance Committee, The Nominating Committee, and the Building Committee. These committees have the responsibility and the authority to oversee their areas of administration of the church. The committee members will be nominated by the Nominating Committee and elected by the church. Committee members and the designated staff member will work together to accomplish the vision and ministry of the church. They will share reports of their activities with the church body as needed. Recommendations for a church vote in each committee's area of responsibility should come from that committee. No person may serve on more than one standing committee at any time. No member may succeed himself/herself to election to the same committee unless one full year has elapsed since his/her last tenure.",
+                
+                "A. Finance Committee - The Finance Committee shall guide the church in development, approval, and administration of all financial matters of the church, including development of an annual budget. The committee shall consist of: the church treasurer, an ex-officio staff member, and three other church members who shall serve for three years on a rotation system. In the absence of a pastor, the Chairman of Deacons shall serve on the Finance Committee.",
+                
+                "The responsibilities and duties of the Finance Committee are to:",
+                
+                "1. Develop and implement procedures to safeguard the funds of the church.",
+                
+                "2. Review budget recommendations from each ministry.",
+                
+                "3. Develop, submit and administer the annual budget.",
+                
+                "4. Consider and approve amendments to the budget.",
+                
+                "5. Approve the budget of any ministry of the church that has an operating fund separate from the church budget under the umbrella of the church.",
+                
+                "6. Cooperate with an annual review of the financial records initiated by the treasurer.",
+                
+                "7. Keep written minutes of each meeting.",
+                
+                "Expenditures - All expenditures are subject to review; therefore funds will remain in a church bank account until used. Individual ministries shall not have separate bank accounts unless approved by the Finance Committee. The church shall he notified and give approval to all pending travel expense of church staff prior to scheduling of the event (I. e.. mission trips, summer camps, youth trips and conferences). No travel at church expense is to be done without first gaining approval by the church to do so. Set forth in this stipulation is the use of the church vans. Any use of the vans for anything other than Manchester Baptist Church scheduled activities is strictly prohibited.",
+                
+                "B. Nominating Committee - The Nominating Committee shall coordinate the staffing of all church leadership positions that are filled by volunteers. The committee will consist of the pastor/elder or chairman of deacons as ex-officio staff member and three church members serving three year rotating terms.",
+                
+                "The responsibilities of the committee are to:",
+                
+                "1. Identify prospective members for service.",
+                
+                "2. Contact prospective nominees and determine willingness to serve.",
+                
+                "3. Present the nominations to the church body for approval.",
+                
+                "Substitutions and additions to the leadership may be put into effect as necessary during the church year.",
+                
+                "C. Building Committee - The Building Committee oversees new construction projects of the church. This committee will be nominated by the church body at a regularly scheduled business meeting of the church and put into place when the need arises.",
+                
+                "D. Special Committees - Short-term committees may be established for special projects or purposes. The committee members will be nominated by the church body at a regularly scheduled business meeting of the church.",
+                
+                "These Bylaws were proposed for adoption by Manchester Baptist Church on this 6th day of July, 2008."]
+        }
+    ]
+};
 
   let resources = {
     "meta": {
@@ -1082,7 +1271,7 @@ let confession = {
             ["MBC on YouTube", "https://youtube.com/playlist?list=PLWn9C8rHG45WxApQG0iVpiCWdmVrwJfmd&si=r_kJv_qmPIMSonwK"],
             ["MBC Kids on Spotify", "https://open.spotify.com/playlist/0wvVFqgLpmpy4d8aJhh6Xl?si=b2273810dfe042d1"],
             ["MBC Kids on Amazon Music", "https://music.amazon.com/user-playlists/1cf2a9645a12425aa44cfa26eea7d0fdsune?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_wNWy6QIVztOUA0xiHSFUSSNtz"],
-            ["MBC on YouTube", "https://youtube.com/playlist?list=PLWn9C8rHG45Uj1N1y7dvyyO9aRo8dlRkg&si=vEgQLnV9bDDncTAv"]
+            ["MBC Kids on YouTube", "https://youtube.com/playlist?list=PLWn9C8rHG45Uj1N1y7dvyyO9aRo8dlRkg&si=vEgQLnV9bDDncTAv"]
         ]
     }
 }

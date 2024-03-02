@@ -5,7 +5,7 @@ import Modals from './modals.js'
 import Countdown from './countdown.js';
 import Header from './header.js';
 import Weather from "./weather.js";
-import { Confession, History, Resources } from './data.js';
+import { Confession, History, Constitution, Bylaws, Resources } from './data.js';
 import Footer from './footerComponent.js';
 
 Header();
@@ -27,6 +27,13 @@ if (confessionContainer != null) {
 const historyContainer = document.querySelector('.history-container');
 if (historyContainer != null) {
     await History(historyContainer);
+}
+
+const constitutionContainer = document.querySelector('.constitution-container');
+const bylawsContainer = document.querySelector('.bylaws-container');
+if (constitutionContainer != null) {
+    await Constitution(constitutionContainer);
+    await Bylaws(bylawsContainer);
 }
 
 const recommendedContainer = document.querySelector('.recommended-container');

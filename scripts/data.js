@@ -95,6 +95,42 @@ async function History(container) {
   }
 }
 
+async function Constitution(container) {
+  for (let i = 0; i < constitution.data.length; i++) {
+      let section = document.createElement('section');
+      section.classList.add('constitution-section')
+      container.appendChild(section);
+
+      let title = document.createElement('h5');
+      title.textContent = constitution.data[i].title;
+      section.appendChild(title);
+
+      for (let j = 0; j < constitution.data[i].text.length; j++) {
+        let paragraph = document.createElement('p');
+        paragraph.textContent = constitution.data[i].text[j];
+        section.appendChild(paragraph);
+      }
+  }
+}
+
+async function Bylaws(container) {
+  for (let i = 0; i < bylaws.data.length; i++) {
+      let section = document.createElement('section');
+      section.classList.add('bylaws-section')
+      container.appendChild(section);
+
+      let title = document.createElement('h5');
+      title.textContent = bylaws.data[i].title;
+      section.appendChild(title);
+
+      for (let j = 0; j < bylaws.data[i].text.length; j++) {
+        let paragraph = document.createElement('p');
+        paragraph.textContent = bylaws.data[i].text[j];
+        section.appendChild(paragraph);
+      }
+  }
+}
+
 async function Resources(container) {
   let news = document.createElement('div');
   container.appendChild(news);
@@ -106,6 +142,7 @@ async function Resources(container) {
       link.classList.add('recommended-resource-links');
       link.textContent = resources.data.news[i][0];
       link.href = resources.data.news[i][1];
+      link.target = "_blank";
       news.appendChild(link);
   }
     
@@ -197,4 +234,4 @@ async function Resources(container) {
   }
 }
 
-export { Confession, History, Resources };
+export { Confession, History, Constitution, Bylaws, Resources };

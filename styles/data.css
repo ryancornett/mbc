@@ -13,6 +13,24 @@ body {
     --expand-dark-800: #666;
   }
 
+.indent {
+  padding-left: 2rem;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.confession-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .chapter {
     margin: 1.2rem 0;
 }
@@ -133,18 +151,22 @@ body {
 }
 
 .history-section > p {
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
+
+/* RECOMMENDED RESOURCES */
 
 .recommended-main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
 }
 
 .recommended-container > div {
   display: flex;
   flex-direction: column;
+  padding-top: 1.5rem;
 }
 
 .recommended-resource-links {
@@ -157,14 +179,27 @@ body {
   color: white;
 }
 
+/* CONSTITUTION & BYLAWS */
+
+.constitution-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.constitution-section, .bylaws-section {
+  margin: 1.5rem auto;
+}
+
 @media (min-width: 920px) {
   .confession-container {
-    max-width: 70vw;
+    max-width: 75ch;
     margin: 0 auto;
     padding: 3rem 0;
   }
 
-  .history-section > p {
+  .history-section, .constitution-section, .bylaws-section {
     width: 75ch;
   }
 
