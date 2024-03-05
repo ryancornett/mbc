@@ -2,112 +2,200 @@
     "meta": {
         "dataObjects": 4,
         "created": "8-15-2023",
-        "updated": "3-1-2024"
+        "updated": "3-4-2024"
     },
     
     "data": [
         {
             "title": "Dedication Statement",
-            "text": [
-                "On September 7, 1952, an all-day service for the dedication of The Home of Manchester Baptist Church was held. The exact wording of the dedication taken from a printed Order of Service reads as follows:",
+            "paragraphs": [
+                {
+                    "text": "On September 7, 1952, an all-day service for the dedication of The Home of Manchester Baptist Church was held. The exact wording of the dedication taken from a printed Order of Service reads as follows:",
+                    "element": "p",
+                    "className": "text-normal"
+                },
                 
-                "This the 7th day of September 1952 brings us together to dedicate the lot, building and all its furnishings to our Lord. With good supervision and economy we have this plant at a cost of $100,000 and free from debt. Therefore we join in heart and love to say we, the Manchester Baptist Church, now in regular service, do hereby give and dedicate, this entire plant unto our Lord and His Son, Jesus Christ, for the purpose of teaching and preaching the faith of the scripture as held now by this church, which is in full accord with the General Association of Kentucky Baptist, and to the worship of God as long as time may permit its use. To be used only for divine worship and services, which are for His glory and advancement of His Kingdom. All services free and no charge to be made for any gathering or meeting within its walls.",
+                {
+                    "text": "This the 7th day of September 1952 brings us together to dedicate the lot, building and all its furnishings to our Lord. With good supervision and economy we have this plant at a cost of $100,000 and free from debt. Therefore we join in heart and love to say we, the Manchester Baptist Church, now in regular service, do hereby give and dedicate, this entire plant unto our Lord and His Son, Jesus Christ, for the purpose of teaching and preaching the faith of the scripture as held now by this church, which is in full accord with the General Association of Kentucky Baptist, and to the worship of God as long as time may permit its use. To be used only for divine worship and services, which are for His glory and advancement of His Kingdom. All services free and no charge to be made for any gathering or meeting within its walls.",
+                    "element": "blockquote",
+                    "className": "blockquote-normal"
+                },
                 
-                "In the above dedication statement made in 1952, the Manchester Baptist Church gave and dedicated the “entire plant” known as the Home of Manchester Baptist Church unto our Lord and His Son, Jesus Christ. Today, July 6, 2008, the entire plant is made up of several buildings. Each of the buildings is a part of the whole and is to be used according to the above statement. All activities therein shall be for His glory and the advancement of His Kingdom with no charge to be made for any gathering within its walls."
+                {
+                    "text": "In the above dedication statement made in 1952, the Manchester Baptist Church gave and dedicated the “entire plant” known as the Home of Manchester Baptist Church unto our Lord and His Son, Jesus Christ. Today, July 6, 2008, the entire plant is made up of several buildings. Each of the buildings is a part of the whole and is to be used according to the above statement. All activities therein shall be for His glory and the advancement of His Kingdom with no charge to be made for any gathering within its walls.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Preamble",
-            "text": [
-                "We declare and affirm these principles in the light of the Holy Scripture to govern the body in an orderly manner. These principles will preserve the liberties of each individual church member and the freedom of action of this body in its relation to other churches."
+            "paragraphs": [
+                {
+                    "text": "We declare and affirm these principles in the light of the Holy Scripture to govern the body in an orderly manner. These principles will preserve the liberties of each individual church member and the freedom of action of this body in its relation to other churches.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Article I - Name",
-            "text": [
-                "This body shall be known as the Manchester Baptist Church of Manchester, KY, using facilities located at 310 Main Street. The use of these facilities shall be in accordance with the Dedication Statement of September 7, 1952. A direct quote of this statement can be found in the Church History included in the 2002 Edition of the Church Directory."
+            "paragraphs": [
+                {
+                    "text": "This body shall be known as the Manchester Baptist Church of Manchester, KY, using facilities located at 310 Main Street. The use of these facilities shall be in accordance with the Dedication Statement of September 7, 1952. A direct quote of this statement can be found in the Church History included in the 2002 Edition of the Church Directory.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Article II - Objectives",
-            "meta": [{"indent": [1, 2, 3, 4]}],
-            "text": [
-                "Our purpose as a local body is as follows:",
-
-                "1. To worship God as a fellowship of believers, in the power of the Holy Spirit, under the lordship of Jesus Christ.",
-                
-                "2. To minister to each other and to all the world.",
-                
-                "3. To lead the lost to a saving knowledge of Jesus Christ both at home and around the world.",
-                
-                "4. To nurture Christian growth through preaching, teaching, and fellowship."
+            "paragraphs": [
+                {
+                    "text": "Our purpose as a local body is as follows:",
+                    "element": "p",
+                    "className": "text-normal"
+                },
+                {
+                    "text": "1. To worship God as a fellowship of believers, in the power of the Holy Spirit, under the lordship of Jesus Christ.",
+                    "element": "p",
+                    "className": "text-indent"
+                },
+                {
+                    "text": "2. To minister to each other and to all the world.",
+                    "element": "p",
+                    "className": "text-indent"
+                },
+                {
+                    "text": "3. To lead the lost to a saving knowledge of Jesus Christ both at home and around the world.",
+                    "element": "p",
+                    "className": "text-indent"
+                },
+                {
+                    "text": "4. To nurture Christian growth through preaching, teaching, and fellowship.",
+                    "element": "p",
+                    "className": "text-indent"
+                }
             ]
         },
 
         {
             "title": "Article III - Statement of Faith",
-            "text": [
-                "The Holy Bible is the inspired Word of God and is the basis for any statement of faith. The church subscribes to the doctrinal statement of “The Philadelphia Confession of Faith” in addition to “The Baptist Faith and Message” as adopted by the Southern Baptist Convention in 1963 and revised in 1998."
+            "paragraphs": [
+                {
+                    "text": "The Holy Bible is the inspired Word of God and is the basis for any statement of faith. The church subscribes to the doctrinal statement of “The Philadelphia Confession of Faith” in addition to “The Baptist Faith and Message” as adopted by the Southern Baptist Convention in 1963 and revised in 1998.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Article IV - Relationships",
-            "text": [
-                "We are governed by the Lord Jesus Christ, who is the Head of the body, the church, as He shall reveal His leadership to us through the Word of God and the Spirit of God. This church is subject to no other ecclesiastical body, but it recognizes and sustains the obligations of mutual counsel and cooperation, which are common among Southern Baptist Churches. Insofar as is practical, this Church will cooperate with and support the Booneville Baptist Association, the Kentucky Baptist Convention, and the Southern Baptist Convention."
+            "paragraphs": [
+                {
+                    "text": "We are governed by the Lord Jesus Christ, who is the Head of the body, the church, as He shall reveal His leadership to us through the Word of God and the Spirit of God. This church is subject to no other ecclesiastical body, but it recognizes and sustains the obligations of mutual counsel and cooperation, which are common among Southern Baptist Churches. Insofar as is practical, this Church will cooperate with and support the Booneville Baptist Association, the Kentucky Baptist Convention, and the Southern Baptist Convention.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Article V - Covenant",
-            "text": [
-                "We, the members of the Manchester Baptist Church, Manchester, Kentucky, having been led as we believe, by the Spirit of God, to receive the Lord Jesus Christ as our Savior, and on the profession of our faith, having been baptized by immersion in the name of the Father, Son and Holy Spirit, do now, in the presence of God and this assembly, enter into a covenant with each other, as one body in Christ. We therefore, agree, by the help of the Holy Spirit and with the Bible, the inspired Word of God as our guide, to walk together in Christian love, to strive for the advancement of this church, to promote spirituality, to sustain its worship, discipline and doctrine, to observe the church ordinances of believer's baptism and the Lord's Supper as authorized by our local Church, to contribute cheerfully and regularly of God's tithes and our offerings to the support of the ministry of our church to the spread of the gospel to all nations.",
-                
-                "We agree to encourage personal and family devotions, to educate our children according to our faith, to seek the salvation of the unbeliever, to be just in our dealings, reliable in our responsibilities, and an example to those around us; to abstain from the sale and use of substances harmful to our bodies, which are the temples of God; to use our influence to combat the abuse of all such harmful substances, and to work untiringly for the advancement of the kingdom of our Savior by witnessing in words and actions.",
-                
-                "We agree to walk in Christian harmony and watchfulness, giving and receiving assistance with meekness and affection, to pray for one another, to help each other in sickness and sorrow, to be slow to get angry, to always be eager for reconciliation, seeking it without delay. We further agree that, when we move from this area, we will as soon as possible unite with some other church where we can carry out the spirit of this covenant and the principles of God's Word."
+            "paragraphs": [
+                {
+                    "text": "We, the members of the Manchester Baptist Church, Manchester, Kentucky, having been led as we believe, by the Spirit of God, to receive the Lord Jesus Christ as our Savior, and on the profession of our faith, having been baptized by immersion in the name of the Father, Son and Holy Spirit, do now, in the presence of God and this assembly, enter into a covenant with each other, as one body in Christ. We therefore, agree, by the help of the Holy Spirit and with the Bible, the inspired Word of God as our guide, to walk together in Christian love, to strive for the advancement of this church, to promote spirituality, to sustain its worship, discipline and doctrine, to observe the church ordinances of believer's baptism and the Lord's Supper as authorized by our local Church, to contribute cheerfully and regularly of God's tithes and our offerings to the support of the ministry of our church to the spread of the gospel to all nations.",
+                    "element": "p",
+                    "className": "text-normal"
+                },
+                {
+                    "text": "We agree to encourage personal and family devotions, to educate our children according to our faith, to seek the salvation of the unbeliever, to be just in our dealings, reliable in our responsibilities, and an example to those around us; to abstain from the sale and use of substances harmful to our bodies, which are the temples of God; to use our influence to combat the abuse of all such harmful substances, and to work untiringly for the advancement of the kingdom of our Savior by witnessing in words and actions.",
+                    "element": "p",
+                    "className": "text-normal"
+                },
+                {
+                    "text": "We agree to walk in Christian harmony and watchfulness, giving and receiving assistance with meekness and affection, to pray for one another, to help each other in sickness and sorrow, to be slow to get angry, to always be eager for reconciliation, seeking it without delay. We further agree that, when we move from this area, we will as soon as possible unite with some other church where we can carry out the spirit of this covenant and the principles of God's Word.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Article VI - Committees",
-            "text": [
-                "Responsibilities of all committees will be developed and voted on by the church. A copy will be made available to all church members."
+            "paragraphs": [
+                {
+                    "text": "Responsibilities of all committees will be developed and voted on by the church. A copy will be made available to all church members.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Article VII - Church Council",
-            "text": [
-                "A Church Council shall consist of all elected ministerial staff, the deacons, elders, the directors of all program organizations, and the chairperson of all church committees. The pastor or his designee shall serve as chairperson of the Church Council. The Church Council serves as the administrative body of the church and shall meet during the last week of every quarter, or as deemed necessary, to calendar and coordinate the work of the church."
+            "paragraphs": [
+                {
+                    "text": "A Church Council shall consist of all elected ministerial staff, the deacons, elders, the directors of all program organizations, and the chairperson of all church committees. The pastor or his designee shall serve as chairperson of the Church Council. The Church Council serves as the administrative body of the church and shall meet during the last week of every quarter, or as deemed necessary, to calendar and coordinate the work of the church.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Article VIII - Amendments",
-            "text": [
-                "Changes in this constitution or in the bylaws may be made at any regular business meeting of the church, provided that copies of each amendment have been presented in writing at the previous regular business meeting, that a written copy of the amendment has been published at least twice in the weekly church newsletter or bulletin prior to being voted on, and that written copies have been made available to each member present.",
-                
-                "Amendments shall be passed by 2/3 vote of all members of the church, eighteen years of age or older, present and voting."
+            "paragraphs": [
+                {
+                    "text": "Changes in this constitution or in the bylaws may be made at any regular business meeting of the church, provided that copies of each amendment have been presented in writing at the previous regular business meeting, that a written copy of the amendment has been published at least twice in the weekly church newsletter or bulletin prior to being voted on, and that written copies have been made available to each member present.",
+                    "element": "p",
+                    "className": "text-normal"
+                },
+                {
+                    "text": "Amendments shall be passed by 2/3 vote of all members of the church, eighteen years of age or older, present and voting.",
+                    "element": "p",
+                    "className": "text-normal"
+                }
             ]
         },
 
         {
             "title": "Article IX - Adoption",
-            "meta": [{"underline": [0, 2]}, {"span": [0, 2]}, {"italics": [4]}],
-            "text": [
-                "Section 1.",
+            "paragraphs": [
+                {
+                    "text": "Section 1.",
+                    "element": "span",
+                    "className": "text-underline"
+                },
             
-                "This constitution and the bylaws shall be considered adopted and in immediate effect if and when two thirds of the members present and voting at the business meeting at which the vote is taken shall vote in favor of same. This vote shall be taken not less than 30 days after formal presentation of the constitution and bylaws to the church.",
+                {
+                    "text": "This constitution and the bylaws shall be considered adopted and in immediate effect if and when two thirds of the members present and voting at the business meeting at which the vote is taken shall vote in favor of same. This vote shall be taken not less than 30 days after formal presentation of the constitution and bylaws to the church.",
+                    "element": "p",
+                    "className": "text-normal"
+                },
                 
-                "Section 2.",
+                {
+                    "text": "Section 2.",
+                    "element": "span",
+                    "className": "text-underline"
+                },
                 
-                "This Constitution and bylaws abolish, supersede, and take the place of any constitution, rules and bylaws and amendments that preceded it.",
                 
-                "This Constitution was proposed for adoption by Manchester Baptist Church on this 6th day of July, 2008."
+                {
+                    "text": "This Constitution and bylaws abolish, supersede, and take the place of any constitution, rules and bylaws and amendments that preceded it.",
+                    "element": "p",
+                    "className": "text-normal"
+                },
+                
+                {
+                    "text": "This Constitution was proposed for adoption by Manchester Baptist Church on this 6th day of July, 2008.",
+                    "element": "p",
+                    "className": "text-italics"
+                }
             ]
         }
     ]

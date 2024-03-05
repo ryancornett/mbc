@@ -105,9 +105,10 @@ async function Constitution(container) {
       title.textContent = constitution.data[i].title;
       section.appendChild(title);
 
-      for (let j = 0; j < constitution.data[i].text.length; j++) {
-        let paragraph = document.createElement('p');
-        paragraph.textContent = constitution.data[i].text[j];
+      for (let j = 0; j < constitution.data[i].paragraphs.length; j++) {
+        let paragraph = document.createElement(constitution.data[i].paragraphs[j].element);
+        paragraph.className = constitution.data[i].paragraphs[j].className;
+        paragraph.textContent = constitution.data[i].paragraphs[j].text;
         section.appendChild(paragraph);
       }
   }
@@ -123,9 +124,10 @@ async function Bylaws(container) {
       title.textContent = bylaws.data[i].title;
       section.appendChild(title);
 
-      for (let j = 0; j < bylaws.data[i].text.length; j++) {
-        let paragraph = document.createElement('p');
-        paragraph.textContent = bylaws.data[i].text[j];
+      for (let j = 0; j < bylaws.data[i].paragraphs.length; j++) {
+        let paragraph = document.createElement(bylaws.data[i].paragraphs[j].element);
+        paragraph.className = bylaws.data[i].paragraphs[j].className;
+        paragraph.textContent = bylaws.data[i].paragraphs[j].text;
         section.appendChild(paragraph);
       }
   }

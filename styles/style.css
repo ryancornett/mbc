@@ -13,8 +13,9 @@
 --sl-color-primary-500: rgb(105 163 231);
 --sl-color-primary-600: #4586d2;
 --sl-color-primary-800: #2f5b8e;
---sl-color-primary-900: #214165;
+--sl-color-primary-900: #103055;
 --dark-blue: var(--sl-color-primary-800);
+--darker-blue: var(--sl-color-primary-900);
 --light-blue: var(--sl-color-primary-500);
 --off-white: var(--sl-color-primary-50);
 --gray: rgb(116, 118, 139);
@@ -157,7 +158,7 @@ nav {
 }
 
 nav.dark {
-  background-color: var(--dark-gray);
+  background-color: var(--darker-blue);
   box-shadow: 0px 2px 15px var(--gray);
   transition: all ease-in-out 350ms;
 }
@@ -352,12 +353,13 @@ main.dark {
 .background-2 {
   background-image: linear-gradient(
     135deg,
-    hsl(210deg 80% 98%) 0%,
-    hsl(212deg 75% 96%) 29%,
+    #F9F871 0%,
+    hsl(212deg 75% 96%) 19%,
     hsl(213deg 73% 94%) 43%,
     hsl(213deg 73% 93%) 57%,
     hsl(213deg 72% 91%) 71%,
-    hsl(213deg 72% 89%) 100%
+    hsl(213deg 72% 89%) 83%,
+    #90E584 100%
   );
   color: black;
   transition: all ease 300ms;
@@ -366,8 +368,8 @@ main.dark {
 .background-2.dark {
   background-image: linear-gradient(
   305deg,
-  hsl(211deg 51% 16%) 0%,
-  hsl(212deg 51% 20%) 21%,
+  #9a6e08 0%,
+  hsl(212deg 51% 20%) 17%,
   hsl(212deg 51% 23%) 30%,
   hsl(212deg 51% 25%) 39%,
   hsl(212deg 50% 27%) 46%,
@@ -375,7 +377,7 @@ main.dark {
   hsl(212deg 50% 32%) 61%,
   hsl(212deg 50% 34%) 69%,
   hsl(212deg 50% 35%) 79%,
-  hsl(212deg 50% 37%) 100%
+  #00A7B5 100%
   );
   color: white;
 }
@@ -499,7 +501,7 @@ footer {
 }
 
 footer.dark {
-  background-color: var(--dark-gray);
+  background-color: var(--darker-blue);
 }
 
 .footer-schedule > ul {
@@ -656,12 +658,6 @@ footer > .row-2 > iframe {
     position: relative;
     z-index: 2;
     scroll-margin-top: 2rem;
-  }
-  
-  nav.dark {
-    background-color: var(--dark-gray);
-    box-shadow: 0px 2px 15px var(--gray);
-    transition: all ease-in-out 350ms;
   }
   
   .banner {

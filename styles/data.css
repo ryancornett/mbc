@@ -13,16 +13,32 @@ body {
     --expand-dark-800: #666;
   }
 
-.indent {
+.text-normal {
+  height: auto;
+}
+
+.text-indent {
   padding-left: 2rem;
 }
 
-.underline {
+.text-underline {
   text-decoration: underline;
 }
 
-.italics {
+.text-italics {
   font-style: italic;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.blockquote-normal {
+  padding: 2rem;
+  font-family: var(--serif);
+  background-color: #ddd;
+  margin: 0.5rem auto;
+  width: 80%;
 }
 
 .confession-main {
@@ -190,6 +206,10 @@ body {
 
 .constitution-section, .bylaws-section {
   margin: 1.5rem auto;
+}
+
+.bylaws-section > h5, .bylaws-section > p {
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 920px) {
