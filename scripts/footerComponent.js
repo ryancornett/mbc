@@ -6,7 +6,7 @@
 
 export default async function(container) {
     const sundaySchedule = ["Sundays", "9:30 AM Fellowship Breakfast", "10:00 AM Sunday School", "11:00 AM Morning Worship Service", "6:00 PM Evening Worship Service"];
-    const wednesdaySchedule = ["Wednesdays", "6:00 PM Prayer & Bible Study", "6:00 PM Youth Groups", "Facebook icon", ];
+    const wednesdaySchedule = ["Wednesdays", "6:00 PM Prayer & Bible Study", "6:00 PM Youth Groups" ];
     const socialLinks = [
         ["https://www.facebook.com/mbcserves/", "MBC Facebook page", "Facebook icon", "images/facebook.webp"],
         ["https://twitter.com/mbcserves/", "MBC Twitter/X page", "Twitter/X icon", "images/twitter-x.webp"],

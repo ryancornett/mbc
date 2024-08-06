@@ -86,6 +86,12 @@ export default function() {
             })
         }
 
+        const blockquote = document.querySelector('.blockquote-normal');
+        if (blockquote != null) {
+            blockquote.classList.toggle('dark');
+            console.log("What's going on?");
+        }
+
         if (lightTheme) {
             switcherIcon.setAttribute('src', "images/sun.webp")
             lightTheme = false;

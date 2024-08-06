@@ -34,11 +34,18 @@ body {
 }
 
 .blockquote-normal {
+  color: black;
   padding: 2rem;
   font-family: var(--serif);
   background-color: #ddd;
   margin: 0.5rem auto;
   width: 80%;
+  transition: all ease 250ms;
+}
+
+main.dark > .confession-container > .constitution-section > .blockquote-normal, .blockquote-normal.dark {
+  background-color: var(--expand-dark-900);
+  color: white;
 }
 
 .confession-main {
