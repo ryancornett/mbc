@@ -18,6 +18,7 @@ async function populatePrayerRequests() {
     rawNames.forEach(name => {
         prayers += `<li class='prayer-item'>${name}</li>`
     })
+    prayers += `<li class='prayer-item'>Weekly prayer focus: ${prayerRequests.focus}</li>`
     prayerRequestsDiv.innerHTML =
     `<h6><i>Last updated ${prayerRequests.updated}</i></h6>
     <ol class="prayer-list">
