@@ -32,7 +32,7 @@ async function getServiceInfo() {
 }
 
 async function populateServiceInfo() {
-    const SERVICE_ELEMENTS = ["date", "Opening Scripture", "Call to Worship", "Song of Fellowship", "Song of Exultation", "Responsive Reading Question", "Responsive Reading Scripture", "Song of Adoration", "Special Music", "Sermon Title", "Sermon Text", "Song of Response", "Church Ordinance", "Benediction"];
+    const SERVICE_ELEMENTS = ["date", "Opening Scripture", "Call to Worship", "Song of Fellowship", "Song of Exultation", "Responsive Reading", "Song of Adoration", "Special Music", "Sermon Title", "Sermon Text", "Song of Response", "Church Ordinance", "Benediction"];
     const serviceInfoDiv = document.getElementById("service-info");
     let serviceInfo;
     if(sessionStorage.getItem('serviceInfo') !== null) {
@@ -48,25 +48,24 @@ async function populateServiceInfo() {
         <p><i>${SERVICE_ELEMENTS[2]}</i>: <span style="font-weight:bold;">${serviceInfo.details.callToWorship}</span></p>
         <p><i>${SERVICE_ELEMENTS[3]}</i>: <span style="font-weight:bold;">${serviceInfo.details.fellowshipSong}</span></p>
         <p><i>${SERVICE_ELEMENTS[4]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfExultation}</span></p>
-        <p><i>${SERVICE_ELEMENTS[5]}</i>: <span style="font-weight:bold;">${serviceInfo.details.responsiveReadingQuestion}</span></p>
-        <p><i>${SERVICE_ELEMENTS[6]}</i>: <span style="font-weight:bold;">${serviceInfo.details.responsiveReadingReference}</span></p>
-        <p><i>${SERVICE_ELEMENTS[7]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfAdoration}</span></p>`;
+        <p><i>${SERVICE_ELEMENTS[5]}</i>: <span style="font-weight:bold;">${serviceInfo.details.responsiveReading}</span></p>
+        <p><i>${SERVICE_ELEMENTS[6]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfAdoration}</span></p>`;
 
     if (serviceInfo.details.specialMusic.isEmpty == "no") {
-        htmlString += `<p><i>${SERVICE_ELEMENTS[8]}</i>: <span style="font-weight:bold;">${serviceInfo.details.specialMusic.provider} - ${serviceInfo.details.specialMusic.title}</span></p>`;
+        htmlString += `<p><i>${SERVICE_ELEMENTS[7]}</i>: <span style="font-weight:bold;">${serviceInfo.details.specialMusic.provider} - ${serviceInfo.details.specialMusic.title}</span></p>`;
     }
 
     htmlString += 
-    `<p><i>${SERVICE_ELEMENTS[9]}</i>: <span style="font-weight:bold;">${serviceInfo.details.sermonTitle}</span></p>
-    <p><i>${SERVICE_ELEMENTS[10]}</i>: <span style="font-weight:bold;">${serviceInfo.details.sermonText}</span></p>
-    <p><i>${SERVICE_ELEMENTS[11]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfResponse}</span></p>`;
+    `<p><i>${SERVICE_ELEMENTS[8]}</i>: <span style="font-weight:bold;">${serviceInfo.details.sermonTitle}</span></p>
+    <p><i>${SERVICE_ELEMENTS[9]}</i>: <span style="font-weight:bold;">${serviceInfo.details.sermonText}</span></p>
+    <p><i>${SERVICE_ELEMENTS[10]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfResponse}</span></p>`;
 
     if (serviceInfo.details.theLordsSupper == 1) {
-        htmlString += `<p><i>${SERVICE_ELEMENTS[12]}</i>: <span style="font-weight:bold;">The Lord's Supper</span></p>`;
+        htmlString += `<p><i>${SERVICE_ELEMENTS[11]}</i>: <span style="font-weight:bold;">The Lord's Supper</span></p>`;
     }
 
     htmlString += 
-    `<p><i>${SERVICE_ELEMENTS[13]}</i>: <span style="font-weight:bold;">${serviceInfo.details.benediction}</span></p><h6> </h6>`;
+    `<p><i>${SERVICE_ELEMENTS[12]}</i>: <span style="font-weight:bold;">${serviceInfo.details.benediction}</span></p><h6> </h6>`;
 
     if (serviceInfo.details.announcements.isEmpty == "no") {
         htmlString += `<p><sl-badge pill>ANNOUNCEMENTS</sl-badge></p>`
