@@ -908,3 +908,16 @@ footer > .row-2 > iframe {
     transition: all 650ms ease-in-out 150ms;
   }
 }
+
+.video-wrapper {
+  padding: 3rem;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+iframe {
+  height: 60vh;
+  width: 50vw;
+}
