@@ -71,7 +71,7 @@ async function populateServiceInfo() {
         htmlString += `<p><sl-badge pill>ANNOUNCEMENTS</sl-badge></p>`
         let announcements = serviceInfo.details.announcements.list;
         announcements.forEach(announcement => {
-        htmlString += `<p>${announcement}</p>`
+        htmlString += `<p>• ${announcement}</p>`
         })
     }
     serviceInfoDiv.innerHTML = htmlString;

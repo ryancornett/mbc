@@ -384,26 +384,39 @@ main.dark {
 
 .about-section:nth-of-type(1) {
   background-image: url('../images/quilts.png');
+  transition: all ease 200ms;
 }
 
 .about-section:nth-of-type(2) {
   background-image: url('../images/table.png');
+  transition: all ease 200ms;
 }
 
 .about-section:nth-of-type(3) {
   background-image: url('../images/calendar.jpg');
+  -webkit-filter: sepia(0.5);
+  filter:sepia(0.5);
+  transition: all ease 200ms;
 }
 
 .about-section:nth-of-type(4) {
   background-image: url('../images/desk.png');
+  transition: all ease 200ms;
 }
 
 .about-section {
   cursor: pointer;
+  transition: all ease 200ms;
 }
 
 .about-section:hover {
-  scale: 1.025;
+  filter: grayscale(100);
+  transition: all ease 200ms;
+}
+
+.about-section:nth-of-type(3):hover {
+  filter:sepia(0);
+  -webkit-filter: sepia(0);
   transition: all ease 200ms;
 }
 
