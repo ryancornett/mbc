@@ -652,6 +652,10 @@ footer > .row-2 > iframe {
   transition: all ease-in-out 300ms;
 }
 
+.video-wrapper iframe {
+  width: 85vw;
+}
+
 @media (min-width: 920px) {
   .mobile-banner {
     display: none;
@@ -930,7 +934,7 @@ footer > .row-2 > iframe {
   align-items: center;
 }
 
-iframe {
+.video-wrapper iframe {
   height: 60vh;
   width: 50vw;
 }
