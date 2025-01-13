@@ -42,7 +42,7 @@ async function populateServiceInfo() {
         sessionStorage.setItem('serviceInfo', JSON.stringify(serviceInfo));
     }
 
-    let exultationOrSupplication = serviceInfo.details.nextSongIsExultation == 1 ? "Song of Exultation" : "Song of Supplication";
+    let exultationOrSupplication = serviceInfo.details.nextSongIsExultation ? "Song of Exultation" : "Song of Supplication";
     
     let htmlString = 
         `<h5 class="serif">${serviceInfo.date} Morning Worship Service:</h5>
@@ -53,7 +53,7 @@ async function populateServiceInfo() {
         <p><i>${SERVICE_ELEMENTS[5]}</i>: <span style="font-weight:bold;">${serviceInfo.details.responsiveReading}</span></p>
         <p><i>${SERVICE_ELEMENTS[6]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfAdoration}</span></p>`;
 
-    if (serviceInfo.details.specialMusic.isEmpty == 0) {
+    if (serviceInfo.details.specialMusic.isScheduled) {
         htmlString += `<p><i>${SERVICE_ELEMENTS[7]}</i>: <span style="font-weight:bold;">${serviceInfo.details.specialMusic.provider} - ${serviceInfo.details.specialMusic.title}</span></p>`;
     }
 
@@ -62,14 +62,14 @@ async function populateServiceInfo() {
     <p><i>${SERVICE_ELEMENTS[9]}</i>: <span style="font-weight:bold;">${serviceInfo.details.sermonText}</span></p>
     <p><i>${SERVICE_ELEMENTS[10]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfResponse}</span></p>`;
 
-    if (serviceInfo.details.theLordsSupper == 1) {
+    if (serviceInfo.details.theLordsSupper) {
         htmlString += `<p><i>${SERVICE_ELEMENTS[11]}</i>: <span style="font-weight:bold;">The Lord's Supper</span></p>`;
     }
 
     htmlString += 
     `<p><i>${SERVICE_ELEMENTS[12]}</i>: <span style="font-weight:bold;">${serviceInfo.details.closing}</span></p><h6> </h6>`;
 
-    if (serviceInfo.details.announcements.isEmpty == 0) {
+    if (serviceInfo.details.announcements.isPopulated) {
         htmlString += `<p><sl-badge pill>ANNOUNCEMENTS</sl-badge></p>`
         let announcements = serviceInfo.details.announcements.list;
         announcements.forEach(announcement => {
