@@ -32,7 +32,7 @@ async function getServiceInfo() {
 }
 
 async function populateServiceInfo() {
-    const SERVICE_ELEMENTS = ["date", "Opening Scripture", "Call to Worship", "Song of Fellowship", "Song of Exultation", "Responsive Reading", "Song of Adoration", "Special Music", "Sermon Title", "Sermon Text", "Song of Response", "Church Ordinance", "Benediction"];
+    const SERVICE_ELEMENTS = ["date", "Opening Scripture", "Call to Worship", "Song of Fellowship", "Song of Exultation", "Responsive Reading", "Song of Adoration", "Special Music", "Sermon Title", "Sermon Text", "Song of Response", "Church Ordinance", "Closing"];
     const serviceInfoDiv = document.getElementById("service-info");
     let serviceInfo;
     if(sessionStorage.getItem('serviceInfo') !== null) {
@@ -41,17 +41,19 @@ async function populateServiceInfo() {
         serviceInfo = await getServiceInfo();
         sessionStorage.setItem('serviceInfo', JSON.stringify(serviceInfo));
     }
+
+    let exultationOrSupplication = serviceInfo.details.nextSongIsExultation == 1 ? "Song of Exultation" : "Song of Supplication";
     
     let htmlString = 
         `<h5 class="serif">${serviceInfo.date} Morning Worship Service:</h5>
         <p><i>${SERVICE_ELEMENTS[1]}</i>: <span style="font-weight:bold;">${serviceInfo.details.openingScripture}</span></p>
         <p><i>${SERVICE_ELEMENTS[2]}</i>: <span style="font-weight:bold;">${serviceInfo.details.callToWorship}</span></p>
         <p><i>${SERVICE_ELEMENTS[3]}</i>: <span style="font-weight:bold;">${serviceInfo.details.fellowshipSong}</span></p>
-        <p><i>${SERVICE_ELEMENTS[4]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfExultation}</span></p>
+        <p><i>${exultationOrSupplication}</i>: <span style="font-weight:bold;">${serviceInfo.details.song}</span></p>
         <p><i>${SERVICE_ELEMENTS[5]}</i>: <span style="font-weight:bold;">${serviceInfo.details.responsiveReading}</span></p>
         <p><i>${SERVICE_ELEMENTS[6]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfAdoration}</span></p>`;
 
-    if (serviceInfo.details.specialMusic.isEmpty == "no") {
+    if (serviceInfo.details.specialMusic.isEmpty == 0) {
         htmlString += `<p><i>${SERVICE_ELEMENTS[7]}</i>: <span style="font-weight:bold;">${serviceInfo.details.specialMusic.provider} - ${serviceInfo.details.specialMusic.title}</span></p>`;
     }
 
@@ -65,9 +67,9 @@ async function populateServiceInfo() {
     }
 
     htmlString += 
-    `<p><i>${SERVICE_ELEMENTS[12]}</i>: <span style="font-weight:bold;">${serviceInfo.details.benediction}</span></p><h6> </h6>`;
+    `<p><i>${SERVICE_ELEMENTS[12]}</i>: <span style="font-weight:bold;">${serviceInfo.details.closing}</span></p><h6> </h6>`;
 
-    if (serviceInfo.details.announcements.isEmpty == "no") {
+    if (serviceInfo.details.announcements.isEmpty == 0) {
         htmlString += `<p><sl-badge pill>ANNOUNCEMENTS</sl-badge></p>`
         let announcements = serviceInfo.details.announcements.list;
         announcements.forEach(announcement => {
