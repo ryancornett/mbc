@@ -5,13 +5,7 @@ async function getPrayers() {
 
 async function populatePrayerRequests() {
     const prayerRequestsDiv = document.getElementById('prayer-requests');
-    let prayerRequests;
-    if(sessionStorage.getItem('prayerRequests') !== null) {
-        prayerRequests = JSON.parse(sessionStorage.getItem('prayerRequests'));
-    } else {
-        prayerRequests = await getPrayers();
-        sessionStorage.setItem('prayerRequests', JSON.stringify(prayerRequests));
-    }
+    let prayerRequests = await getPrayers();
     
     let rawNames = prayerRequests.list;
     let prayers = ""
