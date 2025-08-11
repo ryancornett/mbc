@@ -1715,4 +1715,4 @@ let confession = {
     }
 }
 
-  export { confession, history, constitution, bylaws, resources };
+  export { confession, history, constitution, bylaws };

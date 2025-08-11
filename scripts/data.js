@@ -1,6 +1,6 @@
 "use strict";
 
-import { confession, history, constitution, bylaws, resources } from './objects.js';
+import { confession, history, constitution, bylaws } from './objects.js';
 
 // look for: indent, underline, span, italics
 
@@ -133,107 +133,107 @@ async function Bylaws(container) {
   }
 }
 
-async function Resources(container) {
-  let news = document.createElement('div');
-  container.appendChild(news);
-  let newsHeading = document.createElement('h4');
-  newsHeading.textContent = "News";
-  news.appendChild(newsHeading);
-  for (let i = 0; i < resources.data.news.length; i++) {
-      let link = document.createElement('a');
-      link.classList.add('recommended-resource-links');
-      link.textContent = resources.data.news[i][0];
-      link.href = resources.data.news[i][1];
-      link.target = "_blank";
-      news.appendChild(link);
-  }
+// async function Resources(container) {
+//   let news = document.createElement('div');
+//   container.appendChild(news);
+//   let newsHeading = document.createElement('h4');
+//   newsHeading.textContent = "News";
+//   news.appendChild(newsHeading);
+//   for (let i = 0; i < resources.data.news.length; i++) {
+//       let link = document.createElement('a');
+//       link.classList.add('recommended-resource-links');
+//       link.textContent = resources.data.news[i][0];
+//       link.href = resources.data.news[i][1];
+//       link.target = "_blank";
+//       news.appendChild(link);
+//   }
     
-  let teaching = document.createElement('div');
-  container.appendChild(teaching);
-  let teachingHeading = document.createElement('h4');
-  teachingHeading.textContent = "Teaching";
-  teaching.appendChild(teachingHeading);
-  for (let i = 0; i < resources.data.teaching.length; i++) {
-      let link = document.createElement('a');
-      link.classList.add('recommended-resource-links');
-      link.textContent = resources.data.teaching[i][0];
-      link.href = resources.data.teaching[i][1];
-      teaching.appendChild(link);
-  }
+//   let teaching = document.createElement('div');
+//   container.appendChild(teaching);
+//   let teachingHeading = document.createElement('h4');
+//   teachingHeading.textContent = "Teaching";
+//   teaching.appendChild(teachingHeading);
+//   for (let i = 0; i < resources.data.teaching.length; i++) {
+//       let link = document.createElement('a');
+//       link.classList.add('recommended-resource-links');
+//       link.textContent = resources.data.teaching[i][0];
+//       link.href = resources.data.teaching[i][1];
+//       teaching.appendChild(link);
+//   }
 
-  let music = document.createElement('div');
-  container.appendChild(music);
-  let musicHeading = document.createElement('h4');
-  musicHeading.textContent = "Music";
-  music.appendChild(musicHeading);
-  for (let i = 0; i < resources.data.music.length; i++) {
-      let link = document.createElement('a');
-      link.classList.add('recommended-resource-links');
-      link.textContent = resources.data.music[i][0];
-      link.href = resources.data.music[i][1];
-      music.appendChild(link);
-  }
+//   let music = document.createElement('div');
+//   container.appendChild(music);
+//   let musicHeading = document.createElement('h4');
+//   musicHeading.textContent = "Music";
+//   music.appendChild(musicHeading);
+//   for (let i = 0; i < resources.data.music.length; i++) {
+//       let link = document.createElement('a');
+//       link.classList.add('recommended-resource-links');
+//       link.textContent = resources.data.music[i][0];
+//       link.href = resources.data.music[i][1];
+//       music.appendChild(link);
+//   }
 
-  let podcasts = document.createElement('div');
-  container.appendChild(podcasts);
-  let podcastsHeading = document.createElement('h4');
-  podcastsHeading.textContent = "Podcasts";
-  podcasts.appendChild(podcastsHeading);
-  for (let i = 0; i < resources.data.podcasts.length; i++) {
-      let link = document.createElement('a');
-      link.classList.add('recommended-resource-links');
-      link.textContent = resources.data.podcasts[i][0];
-      link.href = resources.data.podcasts[i][1];
-      podcasts.appendChild(link);
-  }
+//   let podcasts = document.createElement('div');
+//   container.appendChild(podcasts);
+//   let podcastsHeading = document.createElement('h4');
+//   podcastsHeading.textContent = "Podcasts";
+//   podcasts.appendChild(podcastsHeading);
+//   for (let i = 0; i < resources.data.podcasts.length; i++) {
+//       let link = document.createElement('a');
+//       link.classList.add('recommended-resource-links');
+//       link.textContent = resources.data.podcasts[i][0];
+//       link.href = resources.data.podcasts[i][1];
+//       podcasts.appendChild(link);
+//   }
 
-  let channels = document.createElement('div');
-  container.appendChild(channels);
-  let channelsHeading = document.createElement('h4');
-  channelsHeading.textContent = "Channels";
-  channels.appendChild(channelsHeading);
-  for (let i = 0; i < resources.data.channels.length; i++) {
-      let link = document.createElement('a');
-      link.classList.add('recommended-resource-links');
-      link.textContent = resources.data.channels[i][0];
-      link.href = resources.data.channels[i][1];
-      channels.appendChild(link);
-  }
+//   let channels = document.createElement('div');
+//   container.appendChild(channels);
+//   let channelsHeading = document.createElement('h4');
+//   channelsHeading.textContent = "Channels";
+//   channels.appendChild(channelsHeading);
+//   for (let i = 0; i < resources.data.channels.length; i++) {
+//       let link = document.createElement('a');
+//       link.classList.add('recommended-resource-links');
+//       link.textContent = resources.data.channels[i][0];
+//       link.href = resources.data.channels[i][1];
+//       channels.appendChild(link);
+//   }
 
-  let publishers = document.createElement('div');
-  container.appendChild(publishers);
-  let publishersHeading = document.createElement('h4');
-  publishersHeading.textContent = "Publishers";
-  publishers.appendChild(publishersHeading);
-  for (let i = 0; i < resources.data.publishers.length; i++) {
-      let link = document.createElement('a');
-      link.classList.add('recommended-resource-links');
-      link.textContent = resources.data.publishers[i][0];
-      link.href = resources.data.publishers[i][1];
-      publishers.appendChild(link);
-  }
+//   let publishers = document.createElement('div');
+//   container.appendChild(publishers);
+//   let publishersHeading = document.createElement('h4');
+//   publishersHeading.textContent = "Publishers";
+//   publishers.appendChild(publishersHeading);
+//   for (let i = 0; i < resources.data.publishers.length; i++) {
+//       let link = document.createElement('a');
+//       link.classList.add('recommended-resource-links');
+//       link.textContent = resources.data.publishers[i][0];
+//       link.href = resources.data.publishers[i][1];
+//       publishers.appendChild(link);
+//   }
 
-  let classicAuthors = document.createElement('div');
-  container.appendChild(classicAuthors);
-  let classicAuthorsHeading = document.createElement('h4');
-  classicAuthorsHeading.textContent = "Classic Authors";
-  classicAuthors.appendChild(classicAuthorsHeading);
-  for (let i = 0; i < resources.data.classicAuthors.length; i++) {
-      let p = document.createElement('p');
-      p.textContent = resources.data.classicAuthors[i];
-      classicAuthors.appendChild(p);
-  }
+//   let classicAuthors = document.createElement('div');
+//   container.appendChild(classicAuthors);
+//   let classicAuthorsHeading = document.createElement('h4');
+//   classicAuthorsHeading.textContent = "Classic Authors";
+//   classicAuthors.appendChild(classicAuthorsHeading);
+//   for (let i = 0; i < resources.data.classicAuthors.length; i++) {
+//       let p = document.createElement('p');
+//       p.textContent = resources.data.classicAuthors[i];
+//       classicAuthors.appendChild(p);
+//   }
 
-  let modernAuthors = document.createElement('div');
-  container.appendChild(modernAuthors);
-  let modernAuthorsHeading = document.createElement('h4');
-  modernAuthorsHeading.textContent = "Modern Authors";
-  modernAuthors.appendChild(modernAuthorsHeading);
-  for (let i = 0; i < resources.data.modernAuthors.length; i++) {
-      let p = document.createElement('p');
-      p.textContent = resources.data.modernAuthors[i];
-      modernAuthors.appendChild(p);
-  }
-}
+//   let modernAuthors = document.createElement('div');
+//   container.appendChild(modernAuthors);
+//   let modernAuthorsHeading = document.createElement('h4');
+//   modernAuthorsHeading.textContent = "Modern Authors";
+//   modernAuthors.appendChild(modernAuthorsHeading);
+//   for (let i = 0; i < resources.data.modernAuthors.length; i++) {
+//       let p = document.createElement('p');
+//       p.textContent = resources.data.modernAuthors[i];
+//       modernAuthors.appendChild(p);
+//   }
+// }
 
-export { Confession, History, Constitution, Bylaws, Resources };
+export { Confession, History, Constitution, Bylaws };

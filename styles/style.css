@@ -437,10 +437,6 @@ main.dark {
   margin-bottom: 1rem;
 }
 
-.deacons {
-  margin-top: 2rem;
-}
-
 .deacon-columns {
   margin-top: 1rem;
 }
@@ -449,6 +445,10 @@ main.dark {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+}
+
+.resource-links > a {
+  color: inherit;
 }
 
 .schedule > h5, .schedule > p {
@@ -787,7 +787,9 @@ footer > .row-2 > iframe {
   }
   
   .about-container {
+    margin-top: 3rem;
     display: flex;
+    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
     width: 90%;
@@ -865,6 +867,13 @@ footer > .row-2 > iframe {
     max-width: 50%;
     font-size: 1.25rem;
     padding: 1rem 4rem;
+  }
+
+  .leadership {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
   }
 
   #contact-us {

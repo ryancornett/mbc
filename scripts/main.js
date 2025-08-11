@@ -1,11 +1,10 @@
 "use strict";
 
 import { populatePrayerRequests, populateServiceInfo } from './info-fetches.js'
-import Modals from './modals.js'
 import Countdown from './countdown.js';
 import Header from './header.js';
 import Weather from "./weather.js";
-import { Confession, History, Constitution, Bylaws, Resources } from './data.js';
+import { Confession, History, Constitution, Bylaws } from './data.js';
 import Footer from './footerComponent.js';
 
 Header();
@@ -15,7 +14,6 @@ let pageId = document.getElementById('page-id').classList.value;
 if (pageId == 'index') {
     populatePrayerRequests();
     populateServiceInfo();
-    Modals();
     Countdown();
 }
 
@@ -34,11 +32,6 @@ const bylawsContainer = document.querySelector('.bylaws-container');
 if (constitutionContainer != null) {
     await Constitution(constitutionContainer);
     await Bylaws(bylawsContainer);
-}
-
-const recommendedContainer = document.querySelector('.recommended-container');
-if (recommendedContainer != null) {
-    await Resources(recommendedContainer);
 }
 
 let topButton = document.getElementById('to-top');

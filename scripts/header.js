@@ -25,7 +25,7 @@ export default function() {
     navbar.appendChild(navLinks);
     const navUl = document.createElement('ul');
     navLinks.appendChild(navUl);
-    const navigation = [["index.html#", "house-door", "Home"], ["index.html#about", "people", "About MBC"], ["index.html#this-week", "calendar-week", "This Week at MBC"], ["index.html#contact-us", "info-circle", "Contact Us"]];
+    const navigation = [["index.html#", "house-door", "Home"], ["index.html#this-week", "calendar-week", "This Week at MBC"], ["index.html#about", "journals", "Resources"], ["index.html#contact-us", "info-circle", "Contact Us"]];
     
     for (let i = 0; i < navigation.length; i++) {
         let item = document.createElement('li');
