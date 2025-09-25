@@ -91,23 +91,29 @@
             </div>
             
             <div class="viewport-100 background-2">
-                <h4>Church Resources</h4>
+                <h4 id="church-resources">Church Resources</h4>
                 <div class="about-container" id="about">
                     <div class="resource-links">
-                        <a href="constitution.html">Church Information</a>
-                        <a href="history.html">Church History</a>
-                        <a href="confession.html">Philadelphia Confession of Faith, 1742</a>
-                        <a href="https://bfm.sbc.net/bfm2000/" target="_blank">Baptist Faith & Message</a>
+                        <a href="constitution.html"><sl-icon name="info-circle-fill"></sl-icon>Church Information</a>
+                        <a href="history.html"><sl-icon name="hourglass-split"></sl-icon>Church History</a>
+                        <a href="confession.html"><sl-icon name="book-half"></sl-icon>Philadelphia Confession of Faith, 1742</a>
+                        <a href="https://bfm.sbc.net/bfm2000/" target="_blank"><sl-icon name="megaphone-fill"></sl-icon>Baptist Faith & Message</a>
                     </div>
                     
-                    <div class="resource-links">
-                        <a href="https://open.spotify.com/playlist/2DOa8yuH4viYfkdx3vKXWs?si=abda3385b46c43c5" target="_blank">MBC Spotify playlist</a>
-                        <a href="https://music.amazon.com/user-playlists/d7343a2f615e40e6876764bcf5201c96sune?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_PihqMeWAVpEuEVFlGB2hhP187" target="_blank">MBC Amazon Music playlist</a>
-                        <a href="https://youtube.com/playlist?list=PLWn9C8rHG45WxApQG0iVpiCWdmVrwJfmd&si=r_kJv_qmPIMSonwK" target="_blank">MBC YouTube playlist</a>
-                        <a href="https://open.spotify.com/playlist/0wvVFqgLpmpy4d8aJhh6Xl?si=b2273810dfe042d1" target="_blank">MBC Kids Spotify playlist</a>
-                        <a href="https://music.amazon.com/user-playlists/1cf2a9645a12425aa44cfa26eea7d0fdsune?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_wNWy6QIVztOUA0xiHSFUSSNtz" target="_blank">MBC Kids Amazon Music playlist</a>
-                        <a href="https://youtube.com/playlist?list=PLWn9C8rHG45Uj1N1y7dvyyO9aRo8dlRkg&si=vEgQLnV9bDDncTAv" target="_blank">MBC Kids YouTube playlist</a>
-                    </div>
+                    <section class="resource-links-music">
+                        <div id="mbc-praise">
+                            <h5>MBC Praise Music playlists:</h5>
+                            <a href="https://open.spotify.com/playlist/2DOa8yuH4viYfkdx3vKXWs?si=abda3385b46c43c5" target="_blank"><sl-icon name="spotify"></sl-icon></a>
+                            <a href="https://music.amazon.com/user-playlists/d7343a2f615e40e6876764bcf5201c96sune?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_PihqMeWAVpEuEVFlGB2hhP187" target="_blank"><sl-icon name="amazon"></sl-icon></a>
+                            <a href="https://youtube.com/playlist?list=PLWn9C8rHG45WxApQG0iVpiCWdmVrwJfmd&si=r_kJv_qmPIMSonwK" target="_blank"><sl-icon name="youtube"></sl-icon></a>
+                        </div>
+                        <div id="mbc-youth">
+                            <h5>MBC Youth Music playlists:</h5>
+                            <a href="https://open.spotify.com/playlist/0wvVFqgLpmpy4d8aJhh6Xl?si=b2273810dfe042d1" target="_blank"><sl-icon name="spotify"></sl-icon></a>
+                            <a href="https://music.amazon.com/user-playlists/1cf2a9645a12425aa44cfa26eea7d0fdsune?marketplaceId=ATVPDKIKX0DER&musicTerritory=US&ref=dm_sh_wNWy6QIVztOUA0xiHSFUSSNtz" target="_blank"><sl-icon name="amazon"></sl-icon></a>
+                            <a href="https://youtube.com/playlist?list=PLWn9C8rHG45Uj1N1y7dvyyO9aRo8dlRkg&si=vEgQLnV9bDDncTAv" target="_blank"><sl-icon name="youtube"></sl-icon></a>
+                        </div>
+                    </section>
 
                     <!-- <div class="ministries-list">
                         <p>Hospitality (funerals, community meals, etc.)</p>
@@ -122,13 +128,15 @@
             <div class="divider"></div>
             
             <div class="viewport-100 background-2 flex-space-around" id="contact-us">
-                <h6 class="observable">We'd love to hear from you! Perhaps you:
-                    <ul>
-                        <li><h6>have questions about our confession of faith</h6></li>
-                        <li><h6>want to comment on the current sermon series</h6></li>
-                        <li><h6>want to know more about one of our ministries</h6></li>
-                    </ul>
-                    Get in touch with an elder quickly and easily here.</h6>
+                <div class="flex-col">
+                    <h6 class="observable cursive">We'd love to hear from you! Perhaps you:</h6>
+                        <ul>
+                            <li><sl-icon name="question-circle-fill"></sl-icon>have questions about our confession of faith</li>
+                            <li><sl-icon name="chat-square-text-fill"></sl-icon>want to comment on the current sermon series</li>
+                            <li><sl-icon name="postcard-heart-fill"></sl-icon>want to know more about one of our ministries</li>
+                        </ul>
+                        <p>Get in touch with an elder quickly and easily here.</p>
+                </div>
                 <iframe title="Google form to contact MBC"src="https://docs.google.com/forms/d/e/1FAIpQLSdqiZ6xCARe3OqxKd_y2tGl9K1YYOtQ69lgld4i_DlVm7VYlw/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
 

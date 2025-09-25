@@ -43,8 +43,8 @@ async function populateServiceInfo() {
         <p><i>${SERVICE_ELEMENTS[1]}</i>: <span style="font-weight:bold;">${serviceInfo.details.openingScripture}</span></p>
         <p><i>${SERVICE_ELEMENTS[2]}</i>: <span style="font-weight:bold;">${serviceInfo.details.callToWorship}</span></p>
         <p><i>${SERVICE_ELEMENTS[3]}</i>: <span style="font-weight:bold;">${serviceInfo.details.fellowshipSong}</span></p>
-        <p><i>${exultationOrSupplication}</i>: <span style="font-weight:bold;">${serviceInfo.details.song}</span></p>
         <p><i>${SERVICE_ELEMENTS[5]}</i>: <span style="font-weight:bold;">${serviceInfo.details.responsiveReading}</span></p>
+        <p><i>${exultationOrSupplication}</i>: <span style="font-weight:bold;">${serviceInfo.details.song}</span></p>
         <p><i>${SERVICE_ELEMENTS[6]}</i>: <span style="font-weight:bold;">${serviceInfo.details.songOfAdoration}</span></p>`;
 
     if (serviceInfo.details.specialMusic.isScheduled) {
@@ -64,10 +64,10 @@ async function populateServiceInfo() {
     `<p><i>${SERVICE_ELEMENTS[12]}</i>: <span style="font-weight:bold;">${serviceInfo.details.closing}</span></p><h6> </h6>`;
 
     if (serviceInfo.details.announcements.isPopulated) {
-        htmlString += `<p><sl-badge pill>ANNOUNCEMENTS</sl-badge></p>`
+        htmlString += `<p id="announcement-badge"><sl-badge pill>ANNOUNCEMENTS</sl-badge></p>`
         let announcements = serviceInfo.details.announcements.list;
         announcements.forEach(announcement => {
-        htmlString += `<p>• ${announcement}</p>`
+        htmlString += `<p style="margin-top:0.5rem;">• ${announcement}</p>`
         })
     }
     serviceInfoDiv.innerHTML = htmlString;

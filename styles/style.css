@@ -441,15 +441,67 @@ main.dark {
   margin-top: 1rem;
 }
 
+#church-resources {
+  align-self: start;
+  margin-left: 10vw;
+  font-size: 2.25rem;
+  font-family: var(--serif);
+}
+
 .resource-links {
+  margin-right: 10vw;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
 }
-
-.resource-links > a {
-  color: inherit;
+.resource-links a {
+  color: black;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  display: flex;
+  gap:0.5rem;
+  align-items: center;
 }
+.resource-links a:hover {
+  color: #444;
+}
+.viewport-100.dark .resource-links a {
+  color: white;
+}
+.viewport-100.dark .resource-links a:hover {
+  color: rgb(211, 223, 255);
+}
+.resource-links-music {
+  background-color: #eee;
+  padding:1.5rem;
+  border:solid 2px #ccc;
+  border-radius: 10px;
+  margin: 1.5rem 0;
+}
+.viewport-100.dark .about-container .resource-links-music {
+  background-color: #111;
+  border-color: #555;
+}
+
+.viewport-100.dark .about-container #mbc-praise a sl-icon, .viewport-100.dark .about-container #mbc-youth a sl-icon { 
+  color: white;
+}
+#mbc-praise a sl-icon, #mbc-youth a sl-icon { 
+  color: black;
+  font-size: 1.75rem;
+  margin-right:1rem;
+  transition: transform ease 250ms;
+}
+#mbc-praise a sl-icon:hover, #mbc-youth a sl-icon:hover { 
+  transform:scale(1.2);
+}
+#mbc-praise h5, #mbc-youth h5 { 
+  font-size: 1.25rem;
+}
+
+.flex-col h6 { font-size: 2rem;}
+.flex-col ul { margin:1rem 0; list-style: none; margin-bottom: 1.5rem;}
+.flex-col ul li sl-icon { font-size: clamp(1rem, 2.25vw, 2rem);}
+.flex-col ul li { font-size: clamp(1rem, 1.25vw, 1.5rem); display:flex; gap: 0.5rem; align-items: center; padding-top: 0.75rem;}
 
 .schedule > h5, .schedule > p {
   margin-bottom: 1rem;
@@ -465,12 +517,14 @@ main.dark {
   display: none;
 }
 
+#announcement-badge { margin-top: 2rem; }
+
 #prayer-request-container {
   text-wrap: balance;
 }
 
 #prayer-requests {
-  max-width: 75vw;
+  max-width: 55vw;
   margin: 1rem 0;
 }
 
@@ -491,9 +545,9 @@ main.dark {
   height: fit-content;
 }
 
-.viewport-100 > h6 {
+/* .viewport-100 > .flex-col {
   display: none;
-}
+} */
 
 iframe {
   border: none;
@@ -861,13 +915,14 @@ footer > .row-2 > iframe {
     justify-content: flex-end;
     padding-bottom: 2rem;
   }
-  
-  .viewport-100 > h6 {
-    display: unset;
+
+ .flex-col {
+  flex-direction: column;
+  display: unset;
     max-width: 50%;
     font-size: 1.25rem;
     padding: 1rem 4rem;
-  }
+}
 
   .leadership {
     margin-top: 4rem;
