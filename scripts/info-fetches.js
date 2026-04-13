@@ -30,7 +30,8 @@ let songTypeEnum = {
     "adoration": "Song of Adoration",
     "supplication": "Song of Supplication",
     "devotion": "Song of Devotion",
-    "psalm": "Psalm in Meter"
+    "psalm": "Psalm in Meter",
+    "consolation": "Consolation"
 };
 
 async function populateServiceInfo() {
