@@ -76,10 +76,16 @@ async function populateServiceInfo() {
 
     if (serviceInfo.details.announcements.isPopulated) {
         htmlString += `<p id="announcement-badge"><sl-badge pill>ANNOUNCEMENTS</sl-badge></p>`
-        let announcements = serviceInfo.details.announcements.list;
-        announcements.forEach(announcement => {
+        let announcements = serviceInfo.details.announcements;
+        announcements.list.forEach(announcement => {
         htmlString += `<p style="margin-top:0.5rem;">• ${announcement}</p>`
         })
+        const fighterVerseRef = `${announcements.fighterVerse.reference.book} ${announcements.fighterVerse.reference.chapter}:${announcements.fighterVerse.reference.verseRange} (${announcements.fighterVerse.reference.translation})`;
+        const fighterVerse = `<br><p style="margin-top:0.5rem;font-weight:bold;">Fighter Verse | Week of ${announcements.fighterVerse.week}</p>
+        <p style="margin-top:0.5rem;">${announcements.fighterVerse.text}</p>
+        <p style="margin-top:0.5rem;text-align:right;">${fighterVerseRef}</p>`;
+        htmlString += fighterVerse;
+
     }
     serviceInfoDiv.innerHTML = htmlString;
 }
