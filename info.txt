@@ -1,5 +1,5 @@
 Terms of Use Policy for Manchester Baptist Church Website
-Last Updated: [Insert Date]
+Last Updated: 7/27/2026
 
 1. Acceptance of Terms
 By accessing and using the website located at http://mancesterbaptist.church (the “Website”), you accept and agree to be bound by these Terms of Use (“Terms”). If you do not agree with these Terms, please do not use this Website.
@@ -10,39 +10,34 @@ Manchester Baptist Church (“We”, “Us”, “Our”, or “the Church”) r
 3. Use of the Website
 This Website is intended to provide information about Manchester Baptist Church, its beliefs, history, constitution, bylaws, schedule, address, and contact details. You agree to use this Website in a manner consistent with all applicable laws and regulations.
 
-4. Intellectual Property
-Unless otherwise indicated, the Website and its content, including but not limited to text, graphics, logos, and images, are the property of Manchester Baptist Church and are protected by copyright and other intellectual property laws. You may not use, reproduce, distribute, or display any part of the Website without the prior written consent of Manchester Baptist Church.
-
-5. Privacy Policy
+4. Privacy Policy
 Any personal information submitted through the contact form on this Website is subject to our Privacy Policy, which is hereby incorporated into these Terms. Please review our Privacy Policy for more information on how we handle personal data.
 
-6. Limitations of Liability
+5. Limitations of Liability
 To the fullest extent permitted by law, Manchester Baptist Church, its affiliates, officers, or other representatives shall not be liable for any damages arising out of or in connection with the use or inability to use this Website, or any content or services provided on this Website. This is a comprehensive limitation of liability that applies to all damages of any kind, including (without limitation) compensatory, direct, indirect, or consequential damages, loss of data, income or profit, loss or damage to property, and claims of third parties.
 
-7. Links to Other Websites
+6. Links to Other Websites
 This Website may contain links to other websites operated by third parties. These links are provided for your convenience only and do not imply an endorsement or approval by Manchester Baptist Church. We have no control over these third-party websites and accept no responsibility for their content, privacy policies, or practices.
 
-8. Indemnification
+7. Indemnification
 You agree to indemnify, defend, and hold harmless Manchester Baptist Church, its officers, directors, employees, agents, and affiliates from and against all losses, expenses, damages, and costs, including reasonable attorneys' fees, resulting from any violation of these Terms or any activity related to your use of the Website.
 
-9. Governing Law
-These Terms shall be governed by and construed in accordance with the laws of [Insert Jurisdiction, typically where the Church is located], without regard to its conflict of law principles.
+8. Governing Law
+These Terms shall be governed by and construed in accordance with the laws of the Commonwealth of Kentucky, without regard to its conflict of law principles.
 
-10. Severability
+9. Severability
 If any provision of these Terms is found to be unlawful, void, or for any reason unenforceable, then that provision shall be deemed severable from these Terms and shall not affect the validity and enforceability of any remaining provisions.
 
-11. Contact Information
+10. Contact Information
 For any questions regarding these Terms, please contact us at:
 
 Manchester Baptist Church
-[Insert Address]
-[Insert Email]
-[Insert Phone Number]
+terms@manchesterbaptistchurch.org
 
-
+*****
 
 Privacy Policy for Manchester Baptist Church Website
-Last Updated: [Insert Date]
+Last Updated: 7/27/2026
 
 1. Introduction
 Manchester Baptist Church (“We”, “Us”, “Our”, or “the Church”) respects and values your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you visit our website http://mancesterbaptist.church (the “Website”) and use the services available through the Website.
@@ -55,16 +50,18 @@ We may collect personal information that you voluntarily provide to us when you 
 3. Use of Your Information
 We may use the information we collect from you for the following purposes:
 
-To respond to your inquiries and communicate with you.
-To improve our website and services.
-To send periodic emails or newsletters, if you have opted in for such communications.
-For any other purpose with your consent.
+• To respond to your inquiries and communicate with you.
+• To improve our website and services.
+• To send periodic emails or newsletters, if you have opted in for such communications.
+• For any other purpose with your consent.
+
 4. Sharing Your Information
 We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described below:
 
-To comply with any court order, law, or legal process, including to respond to any government or regulatory request.
-To enforce or apply our terms of use and other agreements.
-If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of Manchester Baptist Church, our members, or others.
+• To comply with any court order, law, or legal process, including to respond to any government or regulatory request.
+• To enforce or apply our terms of use and other agreements.
+• If we believe disclosure is necessary or appropriate to protect the rights, property, or safety of Manchester Baptist Church, our members, or others.
+
 5. Data Security
 We employ commercially reasonable security measures to protect your personal information from unauthorized access, use, or disclosure. However, no data transmission over the Internet or storage system can be guaranteed to be 100% secure. Therefore, while we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.
 
@@ -87,6 +84,4 @@ You may have certain rights under applicable data protection laws, including the
 For any questions regarding this Privacy Policy, please contact us at:
 
 Manchester Baptist Church
-[Insert Address]
-[Insert Email]
-[Insert Phone Number]
+privacy@manchesterbaptistchurch.org
