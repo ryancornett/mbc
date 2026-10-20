@@ -32,7 +32,9 @@ let songTypeEnum = {
     "devotion": "Song of Devotion",
     "psalm": "Psalm in Meter",
     "consolation": "Song of Consolation",
-    "thanksgiving": "Song of Thanksgiving"
+    "thanksgiving": "Song of Thanksgiving",
+    "preparation": "Song of Preparation",
+    "none": "none",
 };
 
 async function populateServiceInfo() {
@@ -49,6 +51,7 @@ async function populateServiceInfo() {
 
     const thirdSongType = songTypeEnum[serviceInfo.details.thirdSongType];
     const fourthSongType = songTypeEnum[serviceInfo.details.fourthSongType];
+    let fourthSongString = fourthSongType === "none" ? "" : `<p><i>${fourthSongType}</i>: <span style="font-weight:bold;">${serviceInfo.details.fourthSong}</span></p>`;
     let htmlString = 
         `<h5 class="serif">${serviceInfo.date} Morning Worship Service:</h5>
         <p><i>Opening Scripture</i>: <span style="font-weight:bold;">${serviceInfo.details.openingScripture}</span></p>
@@ -56,7 +59,7 @@ async function populateServiceInfo() {
         <p><i>Song of Fellowship</i>: <span style="font-weight:bold;">${serviceInfo.details.fellowshipSong}</span></p>
         <p><i>Responsive Reading</i>: <span style="font-weight:bold;">${serviceInfo.details.responsiveReading}</span></p>
         <p><i>${thirdSongType}</i>: <span style="font-weight:bold;">${serviceInfo.details.thirdSong}</span></p>
-        <p><i>${fourthSongType}</i>: <span style="font-weight:bold;">${serviceInfo.details.fourthSong}</span></p>`;
+        ${fourthSongString}`;
 
     if (serviceInfo.details.specialMusic.isScheduled) {
         htmlString += `<p><i>Special Music</i>: <span style="font-weight:bold;">${serviceInfo.details.specialMusic.provider} - ${serviceInfo.details.specialMusic.title}</span></p>`;
@@ -80,12 +83,6 @@ async function populateServiceInfo() {
         announcements.list.forEach(announcement => {
         htmlString += `<p style="margin-top:0.5rem;">• ${announcement}</p>`
         })
-        const fighterVerseRef = `${announcements.fighterVerse.reference.book} ${announcements.fighterVerse.reference.chapter}:${announcements.fighterVerse.reference.verseRange} (${announcements.fighterVerse.reference.translation})`;
-        const fighterVerse = `<br><p style="margin-top:0.5rem;font-weight:bold;">Fighter Verse | Week of ${announcements.fighterVerse.week}</p>
-        <p style="margin-top:0.5rem;">${announcements.fighterVerse.text}</p>
-        <p style="margin-top:0.5rem;text-align:right;">${fighterVerseRef}</p>`;
-        htmlString += fighterVerse;
-
     }
     serviceInfoDiv.innerHTML = htmlString;
 }
