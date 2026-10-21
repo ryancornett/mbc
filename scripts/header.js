@@ -4,7 +4,7 @@ export default function() {
     const nav = document.querySelector('nav');
     const banner = document.createElement('div');
     banner.classList.add('banner');
-    banner.setAttribute('id', 'top');
+    nav.setAttribute('aria-label', 'Main navigation');
     
     const bannerTitle = document.createElement('h1');
     bannerTitle.classList.add('cursive');
@@ -25,7 +25,7 @@ export default function() {
     navbar.appendChild(navLinks);
     const navUl = document.createElement('ul');
     navLinks.appendChild(navUl);
-    const navigation = [["index.html#", "house-door", "Home"], ["index.html#this-week", "calendar-week", "This Week at MBC"], ["index.html#about", "journals", "Resources"], ["index.html#contact-us", "info-circle", "Contact Us"]];
+    const navigation = [["index.html#", "house-door", "Home"], ["index.html#this-week", "calendar-week", "This Week at MBC"], ["index.html#church-resources", "journals", "Resources"], ["index.html#contact-us", "info-circle", "Contact Us"]];
     
     for (let i = 0; i < navigation.length; i++) {
         let item = document.createElement('li');
@@ -40,12 +40,16 @@ export default function() {
         item.appendChild(link);
         navUl.appendChild(item);
     };
-    const switcher = document.createElement('div')
+    const switcher = document.createElement('button')
+    switcher.type = 'button';
+    switcher.setAttribute('aria-label', 'Toggle dark theme');
+    switcher.setAttribute('aria-pressed', 'false');
     switcher.classList.add('switcher');
     navbar.appendChild(switcher);
     
     let switcherIcon = document.createElement('img');
     switcherIcon.setAttribute('src', "images/moon.webp");
+    switcherIcon.alt = '';
     switcher.appendChild(switcherIcon);
     const main = document.querySelector('main');
     const SOCIAL_MEDIA_ICONS = document.getElementById('social-media-icons-links');
@@ -89,9 +93,11 @@ export default function() {
         const blockquote = document.querySelector('.blockquote-normal');
         if (blockquote != null) {
             blockquote.classList.toggle('dark');
-            console.log("What's going on?");
+
         }
 
+        switcher.setAttribute('aria-pressed', String(lightTheme));
+        document.documentElement.classList.toggle('theme-dark', lightTheme);
         if (lightTheme) {
             switcherIcon.setAttribute('src', "images/sun.webp")
             lightTheme = false;
@@ -110,5 +116,19 @@ export default function() {
     const drawer = document.querySelector('.drawer');
     const openButton = document.querySelector('#hamburger');
     
-    openButton.addEventListener('click', () => drawer.classList.toggle('open'));
+    function setMenu(open) {
+        drawer.classList.toggle('open', open);
+        openButton.setAttribute('aria-expanded', String(open));
+        openButton.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    }
+    openButton.addEventListener('click', () => setMenu(!drawer.classList.contains('open')));
+    drawer.addEventListener('click', event => {
+        if (event.target.closest('a')) setMenu(false);
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && drawer.classList.contains('open')) {
+            setMenu(false);
+            openButton.focus();
+        }
+    });
 }

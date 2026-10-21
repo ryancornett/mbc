@@ -1,0 +1,224 @@
+/* Loaded last. Retains the original palette, fonts, and page order. */
+:root {
+  --surface: #fff;
+  --surface-soft: var(--off-white);
+  --ink: #202e3c;
+  --muted: #536375;
+  --line: #d7e2ee;
+  --accent: var(--dark-blue);
+  --radius: 1rem;
+}
+html.theme-dark {
+  --surface: #232323;
+  --surface-soft: #2d333b;
+  --ink: #f0f4f8;
+  --muted: #bfccda;
+  --line: #485362;
+  --accent: #b5d1f3;
+  color-scheme: dark;
+}
+body { color: var(--ink); background: var(--surface); line-height: 1.65; overflow-wrap: break-word; }
+button, summary, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+img, iframe { max-width: 100%; }
+p { line-height: 1.8; }
+a { text-underline-offset: .22em; }
+:focus-visible { outline: 3px solid var(--sl-color-primary-600); outline-offset: 4px; }
+.skip-link { position: fixed; top: .75rem; left: 1rem; z-index: 20000; padding: .7rem 1rem; background: var(--surface); color: var(--ink); border-radius: .5rem; transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.mobile-banner { min-height: 76px; height: auto; padding-block: 1rem; gap: 1rem; }
+.mobile-banner > h2 { font-size: clamp(.95rem, 4vw, 1.4rem); line-height: 1.3; }
+#hamburger { border: 0; border-radius: 0; padding: 0; flex: 0 0 28px; width: 28px; height: 3px; margin: 1rem 1.25rem; box-shadow: 0 0 0 12px transparent; }
+#hamburger::before, #hamburger::after { width: 28px; height: 3px; margin: 0; }
+#hamburger::before { top: -9px; } #hamburger::after { top: 9px; }
+.drawer > nav { box-shadow: 0 6px 24px #10305520; padding: 1.25rem clamp(1rem, 4vw, 4rem); }
+.navbar { width: 100%; gap: 1.5rem; align-items: center; }
+.navbar > .nav-links > ul { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; }
+.navbar > .nav-links > ul > li { margin: 0; }
+.navbar > .nav-links > ul > li > a { display: inline-flex; align-items: center; min-height: 44px; font-size: .8rem; letter-spacing: .025em; }
+.switcher { border: 0; background: transparent; padding: 7px; box-sizing: content-box; flex-shrink: 0; }
+.banner { width: 100%; justify-content: space-between; max-width: 1200px; margin: 0 auto 1rem; }
+.banner h1 { font-size: clamp(2rem, 4.5vw, 4rem); line-height: 1.3; }
+.banner > img { height: 64px; }
+.navbar { max-width: 1200px; margin-inline: auto; }
+.to-top { width: 48px; height: 48px; right: 1rem; bottom: 1rem; padding: 0; pointer-events: none; visibility: hidden; }
+.to-top.visible { pointer-events: auto; visibility: visible; opacity: 1; }
+.to-top > a { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: var(--dark-blue); color: white; box-shadow: 0 4px 16px #10305535; font-size: 1.5rem; }
+/* Long documents */
+main.reading-main { display: block; padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 3rem) 5rem; background: var(--surface-soft); color: var(--ink); }
+.page-title { max-width: 1220px; margin: 0 auto 2rem; font-family: var(--serif); font-size: clamp(1.65rem, 3.5vw, 2.65rem); line-height: 1.35; color: var(--accent); }
+.reading-layout { display: grid; gap: 1.5rem; max-width: 1220px; margin: auto; align-items: start; }
+.reading-article { min-width: 0; background: var(--surface); padding: clamp(1.25rem, 4vw, 3.25rem); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 32px #10305506; }
+.reading-article :is(.constitution-container, .bylaws-container, .history-container, .confession-container) { max-width: none; margin: 0; padding: 0; width: 100%; }
+.reading-article :is(.constitution-section, .bylaws-section, .history-section) { width: 100%; margin: 0; padding: 2rem 0; border-bottom: 1px solid var(--line); scroll-margin-top: 2rem; }
+.reading-article section:first-child { padding-top: 0; }
+.reading-article section:last-child { border-bottom: 0; }
+.reading-article :is(h3, h5) { font-family: var(--serif); color: var(--accent); font-size: clamp(1.1rem, 2vw, 1.35rem); line-height: 1.5; margin-bottom: 1rem; }
+.reading-article > h4 { font-family: var(--serif); font-size: 1.8rem; margin: 2rem 0 1.5rem; }
+.reading-article :is(p, span) { font-size: .97rem; line-height: 1.85; }
+.reading-article p { margin: 0 0 1rem; }
+.reading-article .history-section > p { padding: 0; }
+.reading-article .text-indent { padding-left: clamp(1rem, 3vw, 2rem); }
+.reading-article .blockquote-normal { width: 100%; margin: 1.5rem 0; padding: 1.5rem; border-left: 4px solid var(--sl-color-primary-600); background: var(--surface-soft); color: var(--ink); border-radius: 0 .65rem .65rem 0; }
+.reading-contents { min-width: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.reading-contents > summary { padding: 1rem 1.25rem; font-weight: bold; cursor: pointer; color: var(--accent); }
+.reading-contents > nav { padding: 0 .75rem 1rem; background: transparent; color: var(--ink); box-shadow: none; margin: 0; position: static; z-index: auto; }
+.reading-contents ul { list-style: none; padding: 0; }
+.reading-contents li { margin: .15rem 0; }
+.reading-contents a { display: block; padding: .55rem .65rem; font-size: .8rem; line-height: 1.55; text-decoration: none; border-left: 3px solid transparent; border-radius: .3rem; color: var(--muted); }
+.reading-contents a:hover, .reading-contents a[aria-current] { color: var(--accent); background: var(--surface-soft); border-left-color: var(--sl-color-primary-600); }
+.contents-group { padding: 1rem .85rem .3rem; font-weight: bold; font-size: .75rem; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.reading-print { margin: 1rem .65rem 0; padding: .65rem .85rem; border: 1px solid var(--line); border-radius: .5rem; background: var(--surface-soft); color: var(--accent); font-size: .8rem; }
+/* Native details provides keyboard support and keeps hidden text out of tab order. */
+.reading-article .chapter { margin: 0 0 .9rem; border: 1px solid var(--line); border-radius: .65rem; overflow: hidden; scroll-margin-top: 2rem; }
+.reading-article .chapter-title-card { display: list-item; padding: 1rem 1.25rem; background: var(--surface-soft); color: var(--accent); border: 0; cursor: pointer; }
+.reading-article .chapter-title-card:hover { background: var(--surface-soft); color: var(--ink); }
+.reading-article .chapter-title { display: inline; margin: 0; font-size: .95rem; }
+.reading-article .chapter-sections { position: static; z-index: auto; opacity: 1; max-height: none; width: auto; margin: 0; padding: 1.25rem; line-height: inherit; transition: none; }
+.chapter-section + .chapter-section { border-top: 1px solid var(--line); padding-top: 1rem; }
+.chapter-section > p { color: var(--muted); font-size: .83rem; margin-top: .7rem; }
+.leadership { max-width: 1120px; margin: 2rem auto; padding: 1.5rem clamp(1rem, 4vw, 3rem); display: flex; gap: 2rem 4rem; flex-wrap: wrap; }
+.leadership h5 { color: var(--accent); font-family: var(--serif); margin-bottom: .5rem; }
+.deacon-columns { display: flex; flex-wrap: wrap; gap: .5rem 2rem; }
+/* Shared pages and homepage */
+body:has(#page-id.index) main { padding: 0; }
+.viewport-80 { margin-bottom: 0; min-height: 640px; height: auto; background: url('../images/church-desaturated.webp') center / cover; padding: clamp(2rem, 5vw, 5rem) 0 1rem; color: white; }
+.gospel-driven { display: grid; gap: 2rem; width: 100%; margin-top: 0; padding: clamp(1.5rem, 5vw, 4rem); background: #182b3cdd; }
+.waagdc-paragraph { max-width: 65ch; margin: 0; }
+.waagdc-paragraph p, .waagdc-paragraph li { font-size: 1rem; }
+.waagdc > h2:last-of-type { font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.35; }
+.call-to-action { margin-top: 1.5rem; justify-content: flex-start; }
+#social-media-icons-links { position: static; margin-top: 1.5rem; }
+#social-media-icons-links > a > img { filter: invert(1); }
+.viewport-100 { min-height: auto; padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem); }
+#this-week { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+#countdown-service-info { width: 100%; max-width: 1000px; margin: 0 auto; gap: 2rem; flex-wrap: wrap; }
+#prayer-request-container { padding: 0; width: 100%; }
+#prayer-requests { width: 100%; max-width: 1000px; margin-inline: auto; }
+#church-resources { margin: 0; font-size: clamp(1.6rem, 3vw, 2.25rem); }
+.about-container { width: 100%; margin-top: 1.5rem; gap: 2rem; }
+.resource-links { margin: 0; gap: .5rem; }
+.resource-links a { padding: .6rem 0; line-height: 1.5; }
+.resource-links a sl-icon { flex-shrink: 0; }
+.resource-links-music { margin: 0; border: 1px solid var(--line); border-radius: var(--radius); }
+#mbc-praise { margin-bottom: 1rem; }
+#contact-us { gap: 2rem; }
+#contact-us .flex-col { width: 100%; max-width: 600px; padding: 0; }
+.flex-col ul { padding-left: 0; }
+.flex-col ul li { align-items: flex-start; }
+#contact-us > iframe { min-height: 640px; height: 85vh; border-radius: var(--radius); }
+footer { min-height: auto; padding: 3rem clamp(1rem, 4vw, 3rem) 1.5rem; gap: 2rem; }
+footer > .row-1, footer > .row-2 { gap: 2rem; padding: 0; margin: 0; }
+.footer-schedule ul { padding-left: 0; }
+.diamond { width: 64px; height: 64px; margin: 0 2rem; }
+footer .credit { position: static; padding: 1rem 0; text-align: center; }
+footer .row-2 > iframe { margin: 0; border-radius: .75rem; }
+.salvation-main { padding: clamp(1.25rem, 5vw, 4rem); }
+.salvation-main > * { max-width: 75ch; margin-inline: auto; }
+.salvation-main > h5 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.3; }
+.salvation-main .answer { margin: 1.5rem auto; padding-left: 1rem; border-left: 3px solid var(--sl-color-primary-600); }
+.video-wrapper { padding: 1.25rem; height: auto; }
+.video-wrapper iframe { width: min(100%, 1000px); height: auto; aspect-ratio: 16 / 9; }
+@media (max-width: 919px) {
+  .navbar > .nav-links > ul { flex-direction: column; }
+  .navbar { align-items: flex-start; }
+  .prayer-list { columns: 1; }
+  footer > .row-1, footer > .row-2 { align-items: flex-start; width: 100%; }
+  .weather-icon { height: 64px; }
+}
+@media (min-width: 920px) {
+  .gospel-driven { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: center; }
+  .viewport-80 { min-height: 75vh; }
+  .prayer-list { columns: 3; column-gap: 2rem; }
+  #contact-us { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+  #contact-us > iframe { width: 100%; }
+}
+@media (min-width: 1100px) {
+  .reading-layout { grid-template-columns: 270px minmax(0, 1fr); gap: 2.5rem; }
+  .reading-contents { position: sticky; top: 1.5rem; max-height: calc(100dvh - 3rem); overflow-y: auto; scrollbar-width: thin; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .observable { opacity: 1; transform: none; }
+}
+@media print {
+  html, body, main.reading-main { background: white !important; color: black !important; }
+  .drawer, .mobile-banner, footer, .to-top, .reading-contents, .skip-link, .leadership { display: none !important; }
+  main.reading-main { padding: 0; }
+  .reading-layout { display: block; }
+  .reading-article { border: 0; box-shadow: none; padding: 0; background: white; }
+  .reading-article :is(h3, h5), .page-title, .chapter-title-card { color: black !important; }
+  .reading-article .chapter { overflow: visible; }
+  .reading-article .chapter-title-card { background: white; }
+  .reading-article p, .reading-article span { font-size: 10pt; color: black; }
+  h1, h3, h4, h5, summary { break-after: avoid; }
+}
+/* Keep the mobile control's complete touch target at least 44px square. */
+#hamburger { flex-basis: 44px; width: 44px; height: 44px; margin: 0 .75rem 0 0; background: linear-gradient(white, white) center / 28px 3px no-repeat; }
+#hamburger::before, #hamburger::after { left: 8px; }
+#hamburger::before { top: 12px; } #hamburger::after { top: 30px; }
+
+.viewport-80 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding-block: clamp(2rem, 5vw, 5rem);
+}
+
+#social-media-icons-links {
+  position: static;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.gospel-driven {
+  position: relative;
+  padding-bottom: 6rem;
+}
+
+.gospel-driven > #social-media-icons-links {
+  position: absolute;
+  bottom: .5rem;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 920px) {
+  #countdown-service-info {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+    align-items: start;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  #countdown-service-info > .countdown-container {
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  #service-info {
+    min-width: 0;
+  }
+}
+
+@media (min-width: 920px) {
+  #contact-us > .flex-col {
+    justify-self: center;
+    align-self: center;
+    width: fit-content;
+    max-width: 100%;
+  }
+}
+
+footer > .row-1 {
+  align-items: flex-start;
+}

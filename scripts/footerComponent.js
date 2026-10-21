@@ -10,7 +10,6 @@ export default async function(container) {
     const socialLinks = [
         ["https://www.facebook.com/mbcserves/", "MBC Facebook page", "Facebook icon", "images/facebook.webp"],
         ["https://twitter.com/mbcserves/", "MBC Twitter/X page", "Twitter/X icon", "images/twitter-x.webp"],
-        ["https://www.instagram.com/mbcserves", "MBC Instagram page", "Instagram icon", "images/instagram.webp"],
         ["https://www.youtube.com/channel/UCr0VXQX3Iq18VLojGWeuRUw/featured", "MBC YouTube page", "YouTube icon", "images/youtube.webp"]
     ]
 

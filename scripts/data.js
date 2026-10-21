@@ -18,63 +18,22 @@ function populateChapterSections(container, index) {
     }
 }
 
-function populateChapters(container, index) {
-    let chapterDiv = document.createElement('div');
-    chapterDiv.setAttribute('class', 'chapter');
-    let chapterTitleCard = document.createElement('div');
-    chapterTitleCard.setAttribute('class', 'chapter-title-card');
-    let chapterTitle = document.createElement('h6');
-    chapterTitle.setAttribute('class', 'chapter-title');
-    chapterTitle.textContent = confession.data[index].title;
-    chapterTitleCard.appendChild(chapterTitle);
-    let chapterPlusX = document.createElement('p');
-    chapterPlusX.setAttribute('class', 'chapter-plus-x');
-    chapterPlusX.textContent = '+';
-    chapterTitleCard.appendChild(chapterPlusX);
-    chapterDiv.appendChild(chapterTitleCard);
-    let chapterSections = document.createElement('div');
-    chapterSections.setAttribute('class', 'chapter-sections');
-    populateChapterSections(chapterSections, index)
-    chapterDiv.appendChild(chapterSections);
-    container.appendChild(chapterDiv);
-}
-
 function Confession(container) {
-  for (let i = 0; i < confession.data.length; i++) {
-    populateChapters(container, i);
-  };
-
-  let chapterTitles = document.querySelectorAll('.chapter-title-card');
-  let plusSign = document.querySelectorAll('.chapter-plus-x');
-  let chapterSections = document.querySelectorAll('.chapter-sections');
-  let expandables = [chapterTitles, plusSign, chapterSections];
-
-  function collapseAll(position) {
-    for (let i=0; i < expandables.length; i++) {
-      expandables[i][position].classList.remove('active');
-    }
-  }
-
-  function expandCard(position) {
-  for (let i=0; i < expandables.length; i++) {
-      expandables[i][position].classList.add('active');
-    }
-  }
-
-  chapterTitles.forEach((chapterTitle, index) => {
-      chapterTitle.addEventListener('click', () => {
-          if (chapterTitle.classList.contains('active')) {
-          for (let i = 0; i < chapterTitles.length; i++) {
-              collapseAll(i);
-          }
-          } else {        
-          for (let j = 0; j < chapterTitles.length; j++) {
-              collapseAll(j);
-              expandCard(index);
-          }    
-      }
-    })
-  });
+    confession.data.forEach((chapter, index) => {
+        const details = document.createElement('details');
+        details.className = 'chapter';
+        const summary = document.createElement('summary');
+        summary.className = 'chapter-title-card';
+        const title = document.createElement('h3');
+        title.className = 'chapter-title';
+        title.textContent = chapter.title;
+        summary.appendChild(title);
+        const sections = document.createElement('div');
+        sections.className = 'chapter-sections';
+        populateChapterSections(sections, index);
+        details.append(summary, sections);
+        container.appendChild(details);
+    });
 }
 
 async function History(container) {
@@ -83,7 +42,7 @@ async function History(container) {
       section.classList.add('history-section')
       container.appendChild(section);
 
-      let period = document.createElement('h5');
+      let period = document.createElement('h3');
       period.textContent = history.data[i].title;
       section.appendChild(period);
 
@@ -101,7 +60,7 @@ async function Constitution(container) {
       section.classList.add('constitution-section')
       container.appendChild(section);
 
-      let title = document.createElement('h5');
+      let title = document.createElement('h3');
       title.textContent = constitution.data[i].title;
       section.appendChild(title);
 
@@ -120,7 +79,7 @@ async function Bylaws(container) {
       section.classList.add('bylaws-section')
       container.appendChild(section);
 
-      let title = document.createElement('h5');
+      let title = document.createElement('h3');
       title.textContent = bylaws.data[i].title;
       section.appendChild(title);
 

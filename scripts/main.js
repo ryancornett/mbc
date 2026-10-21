@@ -6,6 +6,7 @@ import Header from './header.js';
 import Weather from "./weather.js";
 import { Confession, History, Constitution, Bylaws } from './data.js';
 import Footer from './footerComponent.js';
+import ReadingNavigation from './reading-navigation.js';
 
 Header();
 
@@ -33,6 +34,8 @@ if (constitutionContainer != null) {
     await Constitution(constitutionContainer);
     await Bylaws(bylawsContainer);
 }
+
+ReadingNavigation();
 
 let topButton = document.getElementById('to-top');
 function displayTopButton() {
@@ -87,5 +90,8 @@ function websiteCredit() {
 
 const footerElement = document.querySelector('footer');
 await Footer(footerElement);
-await Weather();
 websiteCredit();
+Weather().catch(() => {
+    const weather = document.getElementById('current-weather');
+    if (weather) weather.hidden = true;
+});

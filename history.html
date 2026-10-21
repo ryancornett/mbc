@@ -4,39 +4,41 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Our Church History | MBC</title>
-        <link rel="icon" type="image/x-icon" href="/images/diamond_black.ico">
+        <link rel="icon" type="image/x-icon" href="images/diamond_black.ico">
         <meta name="description" content="Manchester Baptist Church | Love God, Love Others">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles\style.css">
+        <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/themes/light.css" />
         <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/shoelace-autoloader.js"></script>
-        <link rel="stylesheet" href="..\styles\data.css">
+        <link rel="stylesheet" href="styles/data.css">
 
+        <link rel="stylesheet" href="styles/modern.css">
     </head>
     <body id="top">
+        <a class="skip-link" href="#main-content">Skip to content</a>
         <div class="mobile-banner">
             <h2>Manchester Baptist Church</h2>
-            <div id="hamburger"></div>
+            <button id="hamburger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-navigation"></button>
         </div>
 
-        <div class="drawer">
+        <div class="drawer" id="site-navigation">
             <nav>
             </nav>
         </div>
 
-        <main class="history-main">
+        <main id="main-content" class="history-main">
 
-            <h4 style="padding: 2rem 0 0 2rem;">The History of Manchester Baptist Church</h4>
+            <h4>The History of Manchester Baptist Church</h4>
             <div class="history-container"></div>
 
         </main>
 
         <footer id="footer-div"></footer>
 
-        <div class="to-top" id="to-top"><a href="#top"><sl-icon name="arrow-up-circle"></sl-icon></a></div>
+        <div class="to-top" id="to-top"><a href="#top" aria-label="Back to top"><sl-icon name="arrow-up-circle"></sl-icon></a></div>
 
         <div id="page-id" class="history"></div>
 
-        <script src="..\scripts\main.js" type='module' async defer></script>
+        <script src="scripts/main.js" type='module' async defer></script>
     </body>
 </html>
